@@ -7,6 +7,12 @@
     const src = frame.getAttribute('data-src');
     if (!src || frame.getAttribute('src') === src) return true;
     frame.setAttribute('src', src);
+    if (typeof frame.load === 'function') {
+      frame.load();
+    }
+    if (typeof frame.play === 'function') {
+      frame.play().catch(() => {});
+    }
     return true;
   };
 
@@ -50,7 +56,7 @@
 
     const distance = tickerGroup.getBoundingClientRect().width;
     tickerEl.style.setProperty('--ticker-distance', `${distance}px`);
-    tickerTrack.style.animationDuration = `${Math.max(distance / 85, 18)}s`;
+    tickerTrack.style.animationDuration = `${Math.max(distance / 42.5, 36)}s`;
   };
 
   const syncTickers = () => {

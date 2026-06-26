@@ -15,26 +15,11 @@
   const hero = document.querySelector('.hero');
   if (!hero) return;
 
-  /**
-   * IntersectionObserver approach:
-   * - rootMargin bottom of -85% means the observer fires when the
-   *   hero section's bottom edge crosses 15% from the top of the viewport.
-   * - This triggers the nav to appear as soon as the user starts to
-   *   leave the hero — ready for the next section.
-   */
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (!entry.isIntersecting) {
-        header.classList.add('is-visible');
-      } else {
-        header.classList.remove('is-visible');
-      }
-    },
-    {
-      threshold: 0,
-      rootMargin: '0px 0px -85% 0px',
-    }
-  );
+  const updateVisibility = () => {
+    header.classList.toggle('is-visible', window.scrollY > 24);
+  };
 
-  observer.observe(hero);
+  updateVisibility();
+  window.addEventListener('scroll', updateVisibility, { passive: true });
+  window.addEventListener('resize', updateVisibility);
 })();
