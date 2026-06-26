@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neo Solutions Hero</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__streak"></div>
+        <div class="hero__orb hero__orb--planet"></div>
+        <div class="hero__ring hero__ring--1"></div>
+        <div class="hero__ring hero__ring--2"></div>
+        <div class="hero__ring hero__ring--3"></div>
+        <div class="hero__noise"></div>
+        <div class="parallax"></div>
+      </div>
+
+      <div class="hero__container">
+        <div class="hero__logo-area">
+          <div class="brand" aria-label="Neo Solutions">
+            <img src="Animated White.webp" class="brand__logo-img" alt="Neo Solutions">
+          </div>
+        </div>
+
+        <header class="hero__header">
+          <nav class="nav-links">
+            <a href="#features" class="nav-link" data-en="Features" data-es="Características">Features</a>
+            <a href="#demo" class="nav-link" data-en="How it works" data-es="Cómo funciona">How it works</a>
+            <a href="#pricing" class="nav-link" data-en="Pricing" data-es="Precios">Pricing</a>
+          </nav>
+          <div class="nav-actions">
+            <div class="lang-switch">
+              <button class="lang-switch__btn is-active" id="btn-en" onclick="setLanguage('en')">EN</button>
+              <button class="lang-switch__btn" id="btn-es" onclick="setLanguage('es')">ES</button>
+            </div>
+            <a href="https://cal.com/neosolutions" target="_blank" rel="noopener" class="nav-btn" data-en="Book Call" data-es="Agendar Llamada">
+              Book Call
+            </a>
+          </div>
+        </header>
+
+        <div class="hero__copy">
+
+          <h1 class="hero__headline" id="hero-title" data-en="Grow your business with an <span class='accent'>AI agent</span> that responds like you." data-es="Haz crecer tu negocio con un <span class='accent'>agente de IA</span> que responde como tú.">
+            Grow your business with an <span class="accent">AI agent</span> that responds like
+            you.
+          </h1>
+
+          <p class="hero__lead" data-en="Your leads message you. Neo responds, qualifies, and books appointments automatically." data-es="Tus clientes potenciales te escriben. Neo responde, califica y agenda citas automáticamente.">
+            Your leads message you. Neo responds, qualifies, and books appointments automatically.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="https://cal.com/neosolutions" target="_blank" rel="noopener">
+              <span class="button__text" data-en="Book your evaluation call &amp;rarr;" data-es="Agenda tu llamada de evaluación &amp;rarr;">Book your evaluation call &rarr;</span>
+            </a>
+          </div>
+
+          <p class="hero__note" data-en="Built for businesses running ads and getting leads on WhatsApp, Instagram, and Facebook." data-es="Creado para negocios que publican anuncios y reciben leads en WhatsApp, Instagram y Facebook.">Built for businesses running ads and getting leads on WhatsApp, Instagram, and Facebook.</p>
+        </div>
+
+        <div class="hero__visual" aria-label="Neo agent demo preview">
+          <div class="demo">
+            <div class="demo__grid" aria-hidden="true"></div>
+            <div class="demo__layout">
+              <aside class="demo__rail">
+                <div class="rail__brand module">
+                  <img src="Animated White.webp" class="rail__brand-logo" alt="Neo Solutions">
+                  <div class="rail__title" data-en="<strong>Neo Agent</strong><span>● Online</span>" data-es="<strong>Neo Agente</strong><span>● En línea</span>">
+                    <strong>Neo Agent</strong>
+                    <span>● Online</span>
+                  </div>
+                </div>
+
+                <div class="rail__label" data-en="Channels" data-es="Canales">Channels</div>
+                <div class="channel module">
+                  <div class="channel__icon channel__icon--wa">◎</div>
+                  <div class="channel__meta" data-en="<strong>WhatsApp</strong><span>Fast response</span>" data-es="<strong>WhatsApp</strong><span>Respuesta rápida</span>">
+                    <strong>WhatsApp</strong>
+                    <span>Fast response</span>
+                  </div>
+                  <div class="badge">12</div>
+                </div>
+                <div class="channel module">
+                  <div class="channel__icon channel__icon--ig">◉</div>
+                  <div class="channel__meta" data-en="<strong>Instagram</strong><span>Lead capture</span>" data-es="<strong>Instagram</strong><span>Captura de leads</span>">
+                    <strong>Instagram</strong>
+                    <span>Lead capture</span>
+                  </div>
+                  <div class="badge" id="ig-badge">7</div>
+                </div>
+                <div class="channel module">
+                  <div class="channel__icon channel__icon--fb">f</div>
+                  <div class="channel__meta" data-en="<strong>Facebook</strong><span>Inbox support</span>" data-es="<strong>Facebook</strong><span>Soporte de bandeja</span>">
+                    <strong>Facebook</strong>
+                    <span>Inbox support</span>
+                  </div>
+                  <div class="badge">5</div>
+                </div>
+
+                <div class="rail__nav">
+                  <div class="rail__label" data-en="AI Agent" data-es="Agente de IA">AI Agent</div>
+                  <div class="rail__item is-active module" data-en="<span class='rail__icon' aria-hidden='true'>✦</span>Conversations" data-es="<span class='rail__icon' aria-hidden='true'>✦</span>Conversaciones">
+                    <span class="rail__icon" aria-hidden="true">✦</span>
+                    Conversations
+                  </div>
+                  <div class="rail__item" data-en="<span class='rail__icon' aria-hidden='true'>◌</span>Leads" data-es="<span class='rail__icon' aria-hidden='true'>◌</span>Leads">
+                    <span class="rail__icon" aria-hidden="true">◌</span>
+                    Leads
+                  </div>
+                  <div class="rail__item" data-en="<span class='rail__icon' aria-hidden='true'>◫</span>Bookings" data-es="<span class='rail__icon' aria-hidden='true'>◫</span>Agendamientos">
+                    <span class="rail__icon" aria-hidden="true">◫</span>
+                    Bookings
+                  </div>
+                </div>
+              </aside>
+
+              <main class="demo__chat">
+                <div class="chat__top">
+                  <div class="person">
+                    <div class="person__avatar" aria-hidden="true"></div>
+                    <div class="person__copy" data-en="<strong>Emma Johnson</strong><span>Active now</span>" data-es="<strong>Emma Johnson</strong><span>Activo ahora</span>">
+                      <strong>Emma Johnson</strong>
+                      <span>Active now</span>
+                    </div>
+                  </div>
+                  <div class="chat__dots" aria-hidden="true">···</div>
+                </div>
+
+                <div class="messages">
+                  <div class="bubble bubble--incoming" id="msg-1" data-en="Hi! I&apos;m interested in your service. Are you available this week?<span class='bubble__meta'>10:32 AM</span>" data-es="¡Hola! Estoy interesada en su servicio. ¿Están disponibles esta semana?<span class='bubble__meta'>10:32 AM</span>">
+                    Hi! I&apos;m interested in your service. Are you available this week?
+                    <span class="bubble__meta">10:32 AM</span>
+                  </div>
+                  <div class="bubble bubble--outgoing" id="msg-2" data-en="Absolutely. I can help you check availability and gather the details your team needs.<span class='bubble__meta'>10:32 AM ✓✓</span>" data-es="Por supuesto. Puedo ayudarte a verificar la disponibilidad y recopilar los datos que tu equipo necesita.<span class='bubble__meta'>10:32 AM ✓✓</span>">
+                    Absolutely. I can help you check availability and gather the details your team
+                    needs.
+                    <span class="bubble__meta">10:32 AM ✓✓</span>
+                  </div>
+                  <div class="bubble bubble--incoming" id="msg-3" data-en="Can you send a reminder if I don&apos;t book today?<span class='bubble__meta'>10:33 AM</span>" data-es="¿Me puedes enviar un recordatorio si no agendo hoy?<span class='bubble__meta'>10:33 AM</span>">
+                    Can you send a reminder if I don&apos;t book today?
+                    <span class="bubble__meta">10:33 AM</span>
+                  </div>
+                  <div class="bubble bubble--outgoing" id="msg-4" data-en="Yes. I&apos;ll follow up automatically and notify the team when the lead is ready.<span class='bubble__meta'>10:33 AM ✓✓</span>" data-es="Sí. Haré un seguimiento automático y notificaré al equipo cuando el lead esté listo.<span class='bubble__meta'>10:33 AM ✓✓</span>">
+                    Yes. I&apos;ll follow up automatically and notify the team when the lead is
+                    ready.
+                    <span class="bubble__meta">10:33 AM ✓✓</span>
+                  </div>
+                  <div class="status" id="chat-status">
+                    <span class="status__spark" id="status-spark" aria-hidden="true"></span>
+                    <span id="status-text">Qualifying lead...</span>
+                  </div>
+                </div>
+
+                <div class="compose">
+                  <div class="compose__input" data-en="Type a message..." data-es="Escribe un mensaje...">Type a message...</div>
+                  <div class="compose__send" aria-hidden="true">➤</div>
+                </div>
+              </main>
+
+              <aside class="demo__panel">
+                <div class="panel__card">
+                  <div class="panel__heading" data-en="Qualification" data-es="Calificación">Qualification</div>
+                  <div class="qualification">
+                    <div class="qualification__status" id="qual-status-card">
+                      <div class="qualification__title" data-en="Lead qualified" data-es="Lead calificado">Lead qualified</div>
+                      <div style="color: var(--soft); font-size: 0.9rem;" data-en="High intent" data-es="Alto interés">High intent</div>
+                    </div>
+                    <div class="meta-list">
+                      <div class="meta-list__row" id="qual-goal">
+                        <span class="meta-list__label" data-en="Goal" data-es="Meta">Goal</span>
+                        <span data-en="Grow business / More clients" data-es="Crecer negocio / Más clientes">Grow business / More clients</span>
+                      </div>
+                      <div class="meta-list__row" id="qual-budget">
+                        <span class="meta-list__label" data-en="Budget" data-es="Presupuesto">Budget</span>
+                        <span data-en="$2k - $5k" data-es="$2k - $5k">$2k - $5k</span>
+                      </div>
+                      <div class="meta-list__row" id="qual-timeline">
+                        <span class="meta-list__label" data-en="Timeline" data-es="Plazo">Timeline</span>
+                        <span data-en="ASAP" data-es="Lo antes posible">ASAP</span>
+                      </div>
+                      <div class="meta-list__row" id="qual-source">
+                        <span class="meta-list__label" data-en="Source" data-es="Origen">Source</span>
+                        <span data-en="Instagram DM" data-es="Instagram DM">Instagram DM</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel__card booking" id="booking-card">
+                  <div class="panel__heading" data-en="Next step" data-es="Siguiente paso">Next step</div>
+                  <div class="booking__pill" data-en="Book a call" data-es="Agendar llamada">Book a call</div>
+                  <div class="booking__grid">
+                    <div data-en="Wed, May 22" data-es="Mié, 22 de mayo">Wed, May 22</div>
+                    <div data-en="11:00 AM · 30 min" data-es="11:00 AM · 30 min">11:00 AM · 30 min</div>
+                  </div>
+                  <div class="booking__button" id="booking-btn" data-en="Call booked" data-es="Llamada agendada">Call booked</div>
+                </div>
+              </aside>
+            </div>
+          </div>
+
+          <div class="floating-tag">
+            <span data-en="Instant responses. 24/7" data-es="Respuestas al instante. 24/7">Instant responses. 24/7</span>
+          </div>
+        </div>
+
+        <div class="hero__showreel" id="showreel" aria-labelledby="showreel-title">
+          <div class="showreel__inner">
+            <div class="showreel__copy">
+              <h2 class="showreel__title" id="showreel-title" data-en="A closer look at the system in motion." data-es="Una mirada más cercana al sistema en movimiento.">A closer look at the system in motion.</h2>
+            </div>
+
+            <div class="showreel__frame">
+              <iframe
+                class="showreel__video"
+                data-src="https://www.youtube-nocookie.com/embed/fxCIYrpK6gU?autoplay=1&rel=0&modestbranding=1&controls=0&fs=0&iv_load_policy=3&disablekb=1&playsinline=1&loop=1&playlist=fxCIYrpK6gU&vq=hd1080&mute=1"
+                src="about:blank"
+                title="Neo Solutions showreel video"
+                loading="eager"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="autoplay; encrypted-media"
+              ></iframe>
+            </div>
+
+            <div class="showreel__tickers">
+              <div class="showreel__ticker" aria-hidden="true">
+                <div class="showreel__ticker-track">
+                  <div class="showreel__ticker-group">
+                    <span class="showreel__bubble">Need a quick quote for tomorrow?</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Can you reply today?</span>
+                    <span class="showreel__bubble">We want to book a call this week.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Are you available after 6?</span>
+                    <span class="showreel__bubble">Please send pricing and next steps.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">I have a few questions first.</span>
+                    <span class="showreel__ticker-seam" aria-hidden="true"></span>
+                  </div>
+                  <div class="showreel__ticker-group" aria-hidden="true">
+                    <span class="showreel__bubble">Need a quick quote for tomorrow?</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Can you reply today?</span>
+                    <span class="showreel__bubble">We want to book a call this week.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Are you available after 6?</span>
+                    <span class="showreel__bubble">Please send pricing and next steps.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">I have a few questions first.</span>
+                    <span class="showreel__ticker-seam" aria-hidden="true"></span>
+                  </div>
+                  <div class="showreel__ticker-group" aria-hidden="true">
+                    <span class="showreel__bubble">Need a quick quote for tomorrow?</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Can you reply today?</span>
+                    <span class="showreel__bubble">We want to book a call this week.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Are you available after 6?</span>
+                    <span class="showreel__bubble">Please send pricing and next steps.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">I have a few questions first.</span>
+                    <span class="showreel__ticker-seam" aria-hidden="true"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="showreel__ticker showreel__ticker--reverse" aria-hidden="true">
+                <div class="showreel__ticker-track">
+                  <div class="showreel__ticker-group">
+                    <span class="showreel__bubble">New lead from WhatsApp came in.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Customer asked for pricing details.</span>
+                    <span class="showreel__bubble">Someone wants to schedule a demo.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Message needs a qualified reply.</span>
+                    <span class="showreel__bubble">Follow up before the lead goes cold.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Book the call and confirm the slot.</span>
+                    <span class="showreel__ticker-seam" aria-hidden="true"></span>
+                  </div>
+                  <div class="showreel__ticker-group" aria-hidden="true">
+                    <span class="showreel__bubble">New lead from WhatsApp came in.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Customer asked for pricing details.</span>
+                    <span class="showreel__bubble">Someone wants to schedule a demo.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Message needs a qualified reply.</span>
+                    <span class="showreel__bubble">Follow up before the lead goes cold.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Book the call and confirm the slot.</span>
+                    <span class="showreel__ticker-seam" aria-hidden="true"></span>
+                  </div>
+                  <div class="showreel__ticker-group" aria-hidden="true">
+                    <span class="showreel__bubble">New lead from WhatsApp came in.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Customer asked for pricing details.</span>
+                    <span class="showreel__bubble">Someone wants to schedule a demo.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Message needs a qualified reply.</span>
+                    <span class="showreel__bubble">Follow up before the lead goes cold.</span>
+                    <span class="showreel__bubble showreel__bubble--wide">Book the call and confirm the slot.</span>
+                    <span class="showreel__ticker-seam" aria-hidden="true"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/lang.js"></script>
+    <script src="js/simulation.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/showreel.js"></script>
+  </body>
+</html>
