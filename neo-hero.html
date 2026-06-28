@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Neo Solutions Hero</title>
     <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=30">
   </head>
   <body>
     <section class="hero" aria-labelledby="hero-title">
@@ -29,7 +29,7 @@
         <header class="hero__header">
           <nav class="nav-links">
             <a href="#features" class="nav-link" data-en="Features" data-es="Características">Features</a>
-            <a href="#demo" class="nav-link" data-en="How it works" data-es="Cómo funciona">How it works</a>
+            <a href="#how-it-works" class="nav-link" data-en="How it works" data-es="Cómo funciona">How it works</a>
             <a href="#pricing" class="nav-link" data-en="Pricing" data-es="Precios">Pricing</a>
           </nav>
           <div class="nav-actions">
@@ -470,79 +470,216 @@
 
             <div class="impact" id="pricing" aria-labelledby="impact-title">
               <div class="impact__inner">
-                <div class="impact__hero">
-                  <h2 class="impact__title" id="impact-title">If you do not respond in 5 minutes, your competition might.</h2>
-                  <div class="impact__pulse">
-                    <div class="impact__clock" aria-hidden="true">
-                      <span>5</span>
-                      <small>min</small>
-                    </div>
-                    <p class="impact__pulse-copy">That window decides whether a lead stays warm or disappears into a faster inbox.</p>
+                <div class="impact__messages" aria-label="Incoming lead messages">
+                  <div class="impact__bubble impact__bubble--1">
+                    <img class="impact__bubble-image" src="assets/impact/bubble1.png" alt="" />
+                  </div>
+                  <div class="impact__bubble impact__bubble--2">
+                    <img class="impact__bubble-image" src="assets/impact/bubble2.png" alt="" />
+                  </div>
+                  <div class="impact__bubble impact__bubble--3">
+                    <img class="impact__bubble-image" src="assets/impact/bubble3.png" alt="" />
+                  </div>
+                  <div class="impact__bubble impact__bubble--4">
+                    <img class="impact__bubble-image" src="assets/impact/bubble4.png" alt="" />
+                  </div>
+                  <div class="impact__bubble impact__bubble--5">
+                    <img class="impact__bubble-image" src="assets/impact/bubble5.png" alt="" />
                   </div>
                 </div>
-
-                <div class="impact__board" role="table" aria-label="Response speed and revenue impact comparison">
-                  <div class="impact__board-head" role="row">
-                    <span role="columnheader">Metric</span>
-                    <span role="columnheader">Human team</span>
-                    <span role="columnheader">Neo AI agent</span>
-                    <span role="columnheader">Revenue impact</span>
+                <div class="impact__content">
+                  <div class="impact__hero">
+                    <h2 class="impact__title" id="impact-title">If you do not respond in 5 minutes, your competition might.</h2>
+                    <div class="impact__pulse">
+                      <div class="impact__clock" aria-hidden="true">
+                        <span>5</span>
+                        <small>min</small>
+                      </div>
+                      <p class="impact__pulse-copy">That window decides whether a lead stays warm or disappears into a faster inbox.</p>
+                    </div>
                   </div>
 
-                  <article class="impact__row" role="row">
-                    <div class="impact__metric" role="cell">Chats without a reply</div>
-                    <div class="impact__comparison impact__comparison--human" role="cell">
-                      <div class="impact__label">78%</div>
-                      <div class="impact__track"><span class="impact__fill" style="width: 78%"></span></div>
+                  <div class="impact__board" role="table" aria-label="Response speed and revenue impact comparison">
+                    <div class="impact__board-head" role="row">
+                      <span role="columnheader">Metric</span>
+                      <span role="columnheader">Human team</span>
+                      <span role="columnheader">Neo AI agent</span>
+                      <span role="columnheader">Revenue impact</span>
                     </div>
-                    <div class="impact__comparison impact__comparison--neo" role="cell">
-                      <div class="impact__label impact__label--neo">0%</div>
-                      <div class="impact__track impact__track--neo"><span class="impact__fill impact__fill--neo" style="width: 6%"></span></div>
-                    </div>
-                    <div class="impact__revenue" role="cell">+$8k-$18k/month</div>
-                  </article>
 
-                  <article class="impact__row" role="row">
-                    <div class="impact__metric" role="cell">Availability</div>
-                    <div class="impact__comparison impact__comparison--human" role="cell">
-                      <div class="impact__label">8 hours/day</div>
-                      <div class="impact__track"><span class="impact__fill" style="width: 33%"></span></div>
-                    </div>
-                    <div class="impact__comparison impact__comparison--neo" role="cell">
-                      <div class="impact__label impact__label--neo">24/7</div>
-                      <div class="impact__track impact__track--neo"><span class="impact__fill impact__fill--neo" style="width: 100%"></span></div>
-                    </div>
-                    <div class="impact__revenue" role="cell">+$6k-$14k/month</div>
-                  </article>
+                    <article class="impact__row" role="row">
+                      <div class="impact__metric" role="cell">Chats without a reply</div>
+                      <div class="impact__comparison impact__comparison--human" role="cell">
+                        <div class="impact__label">78%</div>
+                        <div class="impact__track"><span class="impact__fill" style="width: 78%"></span></div>
+                      </div>
+                      <div class="impact__comparison impact__comparison--neo" role="cell">
+                        <div class="impact__label impact__label--neo">0%</div>
+                        <div class="impact__track impact__track--neo"><span class="impact__fill impact__fill--neo" style="width: 6%"></span></div>
+                      </div>
+                      <div class="impact__revenue" role="cell">+$8k-$18k/month</div>
+                    </article>
 
-                  <article class="impact__row" role="row">
-                    <div class="impact__metric" role="cell">Response time</div>
-                    <div class="impact__comparison impact__comparison--human" role="cell">
-                      <div class="impact__label">~34 min</div>
-                      <div class="impact__track"><span class="impact__fill" style="width: 82%"></span></div>
-                    </div>
-                    <div class="impact__comparison impact__comparison--neo" role="cell">
-                      <div class="impact__label impact__label--neo">&lt;1 second</div>
-                      <div class="impact__track impact__track--neo"><span class="impact__fill impact__fill--neo" style="width: 10%"></span></div>
-                    </div>
-                    <div class="impact__revenue" role="cell">+$4k-$10k/month</div>
-                  </article>
+                    <article class="impact__row" role="row">
+                      <div class="impact__metric" role="cell">Availability</div>
+                      <div class="impact__comparison impact__comparison--human" role="cell">
+                        <div class="impact__label">8 hours/day</div>
+                        <div class="impact__track"><span class="impact__fill" style="width: 33%"></span></div>
+                      </div>
+                      <div class="impact__comparison impact__comparison--neo" role="cell">
+                        <div class="impact__label impact__label--neo">24/7</div>
+                        <div class="impact__track impact__track--neo"><span class="impact__fill impact__fill--neo" style="width: 100%"></span></div>
+                      </div>
+                      <div class="impact__revenue" role="cell">+$6k-$14k/month</div>
+                    </article>
 
-                  <article class="impact__row" role="row">
-                    <div class="impact__metric" role="cell">Lead conversion rate</div>
-                    <div class="impact__comparison impact__comparison--human" role="cell">
-                      <div class="impact__label">23%</div>
-                      <div class="impact__track"><span class="impact__fill" style="width: 42%"></span></div>
-                    </div>
-                    <div class="impact__comparison impact__comparison--neo" role="cell">
-                      <div class="impact__label impact__label--neo">48%</div>
-                      <div class="impact__track impact__track--neo"><span class="impact__fill impact__fill--neo" style="width: 86%"></span></div>
-                    </div>
-                    <div class="impact__revenue" role="cell">+$15k-$40k/month</div>
-                  </article>
+                    <article class="impact__row" role="row">
+                      <div class="impact__metric" role="cell">Response time</div>
+                      <div class="impact__comparison impact__comparison--human" role="cell">
+                        <div class="impact__label">~34 min</div>
+                        <div class="impact__track"><span class="impact__fill" style="width: 82%"></span></div>
+                      </div>
+                      <div class="impact__comparison impact__comparison--neo" role="cell">
+                        <div class="impact__label impact__label--neo">&lt;1 second</div>
+                        <div class="impact__track impact__track--neo"><span class="impact__fill impact__fill--neo" style="width: 10%"></span></div>
+                      </div>
+                      <div class="impact__revenue" role="cell">+$4k-$10k/month</div>
+                    </article>
+
+                    <article class="impact__row" role="row">
+                      <div class="impact__metric" role="cell">Lead conversion rate</div>
+                      <div class="impact__comparison impact__comparison--human" role="cell">
+                        <div class="impact__label">23%</div>
+                        <div class="impact__track"><span class="impact__fill" style="width: 42%"></span></div>
+                      </div>
+                      <div class="impact__comparison impact__comparison--neo" role="cell">
+                        <div class="impact__label impact__label--neo">48%</div>
+                        <div class="impact__track impact__track--neo"><span class="impact__fill impact__fill--neo" style="width: 86%"></span></div>
+                      </div>
+                      <div class="impact__revenue" role="cell">+$15k-$40k/month</div>
+                    </article>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <section class="launch-steps" id="how-it-works" aria-labelledby="launch-steps-title">
+              <div class="launch-steps__sticky">
+                <div class="launch-steps__content">
+                  <h2
+                    class="launch-steps__title"
+                    id="launch-steps-title"
+                    data-en="How we launch Neo in 3 steps:"
+                    data-es="Cómo lanzamos Neo en 3 pasos:"
+                  >How we launch Neo in 3 steps:</h2>
+
+                  <div class="launch-steps__progress" aria-hidden="true">
+                    <span></span>
+                  </div>
+
+                  <div class="launch-steps__cards" aria-label="Neo launch process">
+                    <article class="launch-steps__card" data-step="1">
+                      <div class="launch-steps__kicker" data-en="Step 1" data-es="Paso 1">Step 1</div>
+                      <h3 data-en="Book an evaluation call" data-es="Agenda una llamada de evaluación">Book an evaluation call</h3>
+                      <p data-en="We review your channels, current replies, and sales process to find where Neo can create the biggest impact." data-es="Revisamos tus canales, respuestas actuales y proceso de ventas para encontrar dónde Neo puede crear el mayor impacto.">We review your channels, current replies, and sales process to find where Neo can create the biggest impact.</p>
+                    </article>
+
+                    <article class="launch-steps__card" data-step="2">
+                      <div class="launch-steps__kicker" data-en="Step 2" data-es="Paso 2">Step 2</div>
+                      <h3 data-en="We build your AI Agent" data-es="Construimos tu Agente de IA">We build your AI Agent</h3>
+                      <p data-en="We teach Neo what you sell, how your business speaks, and what should happen with each lead." data-es="Le enseñamos a Neo qué vendes, cómo habla tu negocio y qué debe pasar con cada lead.">We teach Neo what you sell, how your business speaks, and what should happen with each lead.</p>
+                    </article>
+
+                    <article class="launch-steps__card" data-step="3">
+                      <div class="launch-steps__kicker" data-en="Step 3" data-es="Paso 3">Step 3</div>
+                      <h3 data-en="Go live in 7 days" data-es="Sal en vivo en 7 días">Go live in 7 days</h3>
+                      <p data-en="Neo starts responding, qualifying, and booking from the first message. Your team focuses on closing." data-es="Neo empieza a responder, calificar y agendar desde el primer mensaje. Tu equipo se enfoca en cerrar.">Neo starts responding, qualifying, and booking from the first message. Your team focuses on closing.</p>
+                    </article>
+                  </div>
+
+                  <div class="launch-steps__cta">
+                    <h3 data-en="Ready for your leads to get a response in under one minute?" data-es="¿Listo para que tus leads reciban respuesta en menos de un minuto?">Ready for your leads to get a response in under one minute?</h3>
+                    <a class="launch-steps__button" href="https://cal.com/neosolutions" target="_blank" rel="noopener" data-en="Book your evaluation call" data-es="Agenda tu llamada de evaluación">Book your evaluation call</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="audience" id="audience" aria-labelledby="audience-title">
+              <div class="audience__header">
+                <h2
+                  class="audience__title"
+                  id="audience-title"
+                  data-en="Who should use Neo?"
+                  data-es="¿Quién debería usar Neo?"
+                >Who should use Neo?</h2>
+
+                <div class="audience__controls" aria-label="Audience carousel controls">
+                  <button class="audience__button audience__button--prev" type="button" aria-label="Previous audience cards" data-carousel-prev>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M14.5 6.5 9 12l5.5 5.5" />
+                    </svg>
+                  </button>
+                  <button class="audience__button audience__button--next" type="button" aria-label="Next audience cards" data-carousel-next>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="m9.5 6.5 5.5 5.5-5.5 5.5" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="audience__viewport" data-carousel-viewport>
+                <div class="audience__track" role="list">
+                  <article class="audience__card" role="listitem">
+                    <video class="audience__image" src="assets/audience/audience_leads.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                    <div class="audience__copy">
+                      <h3 data-en="For businesses already generating leads" data-es="Para negocios que ya generan leads">For businesses already generating leads</h3>
+                      <p data-en="Coaches, consultants, clinics, local businesses, and agencies can use Neo to respond, qualify, and book automatically." data-es="Coaches, consultores, clínicas, negocios locales y agencias pueden usar Neo para responder, calificar y agendar automáticamente.">Coaches, consultants, clinics, local businesses, and agencies can use Neo to respond, qualify, and book automatically.</p>
+                    </div>
+                  </article>
+
+                  <article class="audience__card" role="listitem">
+                    <video class="audience__image" src="assets/audience/audience_ads.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                    <div class="audience__copy">
+                      <h3 data-en="For businesses running paid ads" data-es="Para negocios con anuncios activos">For businesses running paid ads</h3>
+                      <p data-en="If leads come from Meta, Google, WhatsApp, Instagram, Facebook, or website forms, Neo reaches them before they go cold." data-es="Si tus leads vienen de Meta, Google, WhatsApp, Instagram, Facebook o formularios web, Neo los contacta antes de que se enfríen.">If leads come from Meta, Google, WhatsApp, Instagram, Facebook, or website forms, Neo reaches them before they go cold.</p>
+                    </div>
+                  </article>
+
+                  <article class="audience__card" role="listitem">
+                    <video class="audience__image" src="assets/audience/audience_team.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                    <div class="audience__copy">
+                      <h3 data-en="For teams that cannot chase every message" data-es="Para equipos que no pueden perseguir cada mensaje">For teams that cannot chase every message</h3>
+                      <p data-en="Neo handles first replies, qualification questions, follow-up reminders, and next steps so your team can focus on qualified conversations." data-es="Neo maneja primeras respuestas, preguntas de calificación, recordatorios y próximos pasos para que tu equipo se enfoque en conversaciones calificadas.">Neo handles first replies, qualification questions, follow-up reminders, and next steps so your team can focus on qualified conversations.</p>
+                    </div>
+                  </article>
+
+                  <article class="audience__card" role="listitem">
+                    <video class="audience__image" src="assets/audience/audience_calls.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                    <div class="audience__copy">
+                      <h3 data-en="For offers that depend on booked calls" data-es="Para ofertas que dependen de llamadas agendadas">For offers that depend on booked calls</h3>
+                      <p data-en="When a prospect qualifies, Neo sends them to your calendar automatically so your team spends less time coordinating and more time closing." data-es="Cuando un prospecto califica, Neo lo envía automáticamente a tu calendario para que tu equipo coordine menos y cierre más.">When a prospect qualifies, Neo sends them to your calendar automatically so your team spends less time coordinating and more time closing.</p>
+                    </div>
+                  </article>
+
+                  <article class="audience__card" role="listitem">
+                    <video class="audience__image" src="assets/audience/audience_inbound.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                    <div class="audience__copy">
+                      <h3 data-en="For multi-channel inboxes" data-es="Para bandejas multicanal">For multi-channel inboxes</h3>
+                      <p data-en="Neo keeps WhatsApp, Instagram, Facebook, and site inquiries moving with one qualification flow instead of scattered follow-up." data-es="Neo mantiene WhatsApp, Instagram, Facebook y consultas web avanzando con un solo flujo de calificación en vez de seguimiento disperso.">Neo keeps WhatsApp, Instagram, Facebook, and site inquiries moving with one qualification flow instead of scattered follow-up.</p>
+                    </div>
+                  </article>
+
+                  <article class="audience__card" role="listitem">
+                    <video class="audience__image" src="assets/audience/audience_service.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                    <div class="audience__copy">
+                      <h3 data-en="For service businesses that need speed" data-es="Para negocios de servicios que necesitan rapidez">For service businesses that need speed</h3>
+                      <p data-en="If every missed reply can become a lost booking, Neo gives every inbound lead an immediate next step." data-es="Si cada respuesta perdida puede convertirse en una reserva perdida, Neo le da a cada lead entrante un próximo paso inmediato.">If every missed reply can become a lost booking, Neo gives every inbound lead an immediate next step.</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>
@@ -552,6 +689,9 @@
     <script src="js/simulation.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/impact-scroll.js?v=18"></script>
+    <script src="js/launch-steps.js?v=25"></script>
+    <script src="js/audience-carousel.js?v=2"></script>
     <script src="js/showreel.js"></script>
   </body>
 </html>
