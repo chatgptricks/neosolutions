@@ -63,14 +63,14 @@
     bookingBtn.style.boxShadow = "0 16px 34px rgba(31, 94, 255, 0.34)";
 
     // Timeline execution
-    // 1. Emma Johnson enters, Instagram badge flashes and increments (t = 1.5s)
+    // 1. Emma Johnson enters, Instagram badge flashes and increments (t = 1.0s)
     timeouts.push(setTimeout(() => {
       igBadge.classList.add("is-flashing");
       igBadge.textContent = t('igBadgeVal8');
       statusText.textContent = t('userTyping');
-    }, 1500));
+    }, 1000));
 
-    // 2. msg1 (incoming) slides in (t = 3.0s)
+    // 2. msg1 (incoming) slides in (t = 2.0s)
     timeouts.push(setTimeout(() => {
       igBadge.classList.remove("is-flashing");
       msg1.classList.add("is-visible");
@@ -78,9 +78,9 @@
       statusText.textContent = t('neoResponding');
       statusSpark.style.background = "radial-gradient(circle, #4be2ff 0 20%, #1f5eff 60%, transparent 70%)";
       statusSpark.style.boxShadow = "0 0 18px rgba(31, 94, 255, 0.7)";
-    }, 3000));
+    }, 2000));
 
-    // 3. msg2 (outgoing) slides in, Instagram badge resets, Source is qualified (t = 5.5s)
+    // 3. msg2 (outgoing) slides in, Instagram badge resets, Source is qualified (t = 4.0s)
     timeouts.push(setTimeout(() => {
       msg2.classList.add("is-visible");
       scrollChat();
@@ -89,56 +89,56 @@
       statusText.textContent = t('awaitingReply');
       statusSpark.style.background = "radial-gradient(circle, #f5f8ff 0 20%, #7183a8 60%, transparent 70%)";
       statusSpark.style.boxShadow = "0 0 12px rgba(168, 182, 212, 0.4)";
-    }, 5500));
+    }, 4000));
 
-    // 4. Emma johnson types (t = 7.5s)
+    // 4. Emma johnson types (t = 5.8s)
     timeouts.push(setTimeout(() => {
       statusText.textContent = t('userTyping');
-    }, 7500));
+    }, 5800));
 
-    // 5. msg3 (incoming) slides in (t = 9.0s)
+    // 5. msg3 (incoming) slides in (t = 7.2s)
     timeouts.push(setTimeout(() => {
       msg3.classList.add("is-visible");
       scrollChat();
       statusText.textContent = t('neoQualifying');
       statusSpark.style.background = "radial-gradient(circle, #dcbaff 0 20%, #7b5cff 60%, transparent 70%)";
       statusSpark.style.boxShadow = "0 0 18px rgba(165, 120, 255, 0.7)";
-    }, 9000));
+    }, 7200));
 
-    // 6. msg4 (outgoing) slides in, qualifications pop up (t = 11.5s)
+    // 6. msg4 (outgoing) slides in, qualifications pop up (t = 9.2s)
     timeouts.push(setTimeout(() => {
       msg4.classList.add("is-visible");
       scrollChat();
       statusText.textContent = t('qualifyingLead');
-    }, 11500));
+    }, 9200));
 
-    // 7. Qual goal (t = 12.2s)
+    // 7. Qual goal (t = 9.9s)
     timeouts.push(setTimeout(() => {
       qualGoal.classList.add("is-visible");
-    }, 12200));
+    }, 9900));
 
-    // 8. Qual budget (t = 12.8s)
+    // 8. Qual budget (t = 10.5s)
     timeouts.push(setTimeout(() => {
       qualBudget.classList.add("is-visible");
-    }, 12800));
+    }, 10500));
 
-    // 9. Qual timeline (t = 13.4s)
+    // 9. Qual timeline (t = 11.1s)
     timeouts.push(setTimeout(() => {
       qualTimeline.classList.add("is-visible");
-    }, 13400));
+    }, 11100));
 
-    // 10. Lead status qualified lights up (t = 14.0s)
+    // 10. Lead status qualified lights up (t = 11.7s)
     timeouts.push(setTimeout(() => {
       qualStatusCard.classList.add("is-visible");
-    }, 14000));
+    }, 11700));
 
-    // 11. Booking Card slides in (t = 15.0s)
+    // 11. Booking Card slides in (t = 12.7s)
     timeouts.push(setTimeout(() => {
       bookingCard.classList.add("is-visible");
       bookingBtn.textContent = t('bookingCall');
-    }, 15000));
+    }, 12700));
 
-    // 12. Call booked completed (t = 16.5s)
+    // 12. Call booked completed (t = 14.0s)
     timeouts.push(setTimeout(() => {
       bookingBtn.textContent = t('callBookedComplete');
       bookingBtn.style.background = "linear-gradient(135deg, #24d366, #128c7e)";
@@ -146,12 +146,12 @@
       statusText.textContent = t('leadQualifiedBooked');
       statusSpark.style.background = "radial-gradient(circle, #b9ffdf 0 20%, #24d366 60%, transparent 70%)";
       statusSpark.style.boxShadow = "0 0 18px rgba(36, 211, 102, 0.7)";
-    }, 16500));
+    }, 14000));
 
-    // 13. Loop back (t = 22.5s)
+    // 13. Loop back (t = 20.0s)
     timeouts.push(setTimeout(() => {
       startDemoSimulation();
-    }, 22500));
+    }, 20000));
   };
 
   // Listen for language change to restart simulation in the correct language

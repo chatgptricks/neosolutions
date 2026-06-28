@@ -10,7 +10,9 @@
 
     const styles = window.getComputedStyle(track);
     const gap = Number.parseFloat(styles.columnGap || styles.gap || '0') || 0;
-    return card.getBoundingClientRect().width + gap;
+    const cardStep = card.getBoundingClientRect().width + gap;
+    const visible = Math.max(1, Math.floor(track.clientWidth / cardStep));
+    return cardStep * visible;
   };
 
   const updateButtons = (section) => {
@@ -51,15 +53,12 @@
       track.scrollBy({ left: getStep(track), behavior: 'smooth' });
     });
 
-    section.addEventListener('wheel', (event) => {
-      const dominantDelta = Math.abs(event.deltaX) > Math.abs(event.deltaY)
-        ? event.deltaX
-        : event.deltaY;
-
-      if (!canScrollHorizontally(track, dominantDelta)) return;
+    track.addEventListener('wheel', (event) => {
+      if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
+      if (!canScrollHorizontally(track, event.deltaX)) return;
 
       event.preventDefault();
-      track.scrollLeft += dominantDelta;
+      track.scrollLeft += event.deltaX;
       updateButtons(section);
     }, { passive: false });
 

@@ -5,7 +5,7 @@
   if (!sections.length) return;
 
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-  const allStepsVisibleProgress = 0.576;
+  const allStepsVisibleProgress = 1.0;
 
   const getProgress = (section) => {
     const rect = section.getBoundingClientRect();
@@ -20,9 +20,26 @@
     };
   };
 
+  const resetSection = (section) => {
+    const cards = Array.from(section.querySelectorAll('.launch-steps__card'));
+    section.dataset.maxProgress = '0';
+    section.style.setProperty('--steps-progress', '0');
+    section.classList.remove('is-condensed', 'is-complete');
+
+    cards.forEach((card) => {
+      card.classList.remove('is-visible', 'is-current');
+    });
+  };
+
   const updateSection = (section) => {
     const cards = Array.from(section.querySelectorAll('.launch-steps__card'));
-    const { progress } = getProgress(section);
+    const { progress, rect, viewportHeight } = getProgress(section);
+
+    if (rect.top >= viewportHeight || rect.bottom <= 0) {
+      resetSection(section);
+      return;
+    }
+
     const previousMaxProgress = Number(section.dataset.maxProgress || '0');
     const revealProgress = Math.max(previousMaxProgress, progress);
 
@@ -30,13 +47,13 @@
 
     const activeStep = revealProgress >= allStepsVisibleProgress
       ? 3
-      : revealProgress >= 0.32
+      : revealProgress >= 0.66
         ? 2
-        : revealProgress >= 0.08
+        : revealProgress >= 0.10
           ? 1
           : 0;
-    const isCondensed = revealProgress >= 0.64;
-    const showCta = revealProgress >= 0.84;
+    const isCondensed = revealProgress >= allStepsVisibleProgress;
+    const showCta = revealProgress >= allStepsVisibleProgress;
 
     section.style.setProperty('--steps-progress', revealProgress.toFixed(3));
     section.classList.toggle('is-condensed', isCondensed || showCta);
@@ -47,34 +64,6 @@
       card.classList.toggle('is-visible', activeStep >= step);
       card.classList.toggle('is-current', activeStep === step);
     });
-  };
-
-  const releaseCompletedSection = (event) => {
-    if (event.deltaY >= 0) return;
-
-    const section = event.currentTarget;
-    const maxProgress = Number(section.dataset.maxProgress || '0');
-    if (maxProgress < allStepsVisibleProgress) return;
-
-    const { progress, rect, viewportHeight } = getProgress(section);
-    const isPinnedInsideSection = rect.top < -4 && rect.bottom > viewportHeight + 4;
-    if (!isPinnedInsideSection || progress <= 0.02) return;
-
-    event.preventDefault();
-
-    const targetTop = Math.max(0, section.offsetTop - 1);
-    const root = document.documentElement;
-    const body = document.body;
-    const previousRootScrollBehavior = root.style.scrollBehavior;
-    const previousBodyScrollBehavior = body.style.scrollBehavior;
-
-    root.style.scrollBehavior = 'auto';
-    body.style.scrollBehavior = 'auto';
-    window.scrollTo(0, targetTop);
-    root.style.scrollBehavior = previousRootScrollBehavior;
-    body.style.scrollBehavior = previousBodyScrollBehavior;
-
-    requestUpdate();
   };
 
   let rafId = 0;
@@ -92,8 +81,5 @@
   window.addEventListener('scroll', requestUpdate, { passive: true });
   window.addEventListener('resize', requestUpdate, { passive: true });
   window.addEventListener('load', requestUpdate, { once: true });
-  sections.forEach((section) => {
-    section.addEventListener('wheel', releaseCompletedSection, { passive: false });
-  });
   requestUpdate();
 })();
