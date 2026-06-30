@@ -1,5 +1,5 @@
 (() => {
-  const frame = document.querySelector('.showreel__video[data-src], .showreel__video[data-youtube-id]');
+  const frame = document.querySelector('.showreel__video[data-src], .showreel__video[data-youtube-id], wistia-player.showreel__video[media-id]');
   const tickers = document.querySelectorAll('.showreel__ticker');
   if (!frame && !tickers.length) return;
 
@@ -7,6 +7,7 @@
   const isIntroVideo = Boolean(frame && intro?.contains(frame));
   const isNativeVideo = frame?.tagName === 'VIDEO';
   const isYoutubeVideo = frame?.tagName === 'IFRAME' && frame.hasAttribute('data-youtube-id');
+  const isWistiaVideo = frame?.tagName === 'WISTIA-PLAYER';
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
   const easeOutCubic = (value) => 1 - Math.pow(1 - value, 3);
   let playbackRequested = false;
@@ -42,6 +43,21 @@
       return true;
     }
 
+    if (isWistiaVideo) {
+      if (typeof frame.play === 'function') {
+        frame.play();
+        return true;
+      }
+
+      customElements.whenDefined('wistia-player').then(() => {
+        if (playbackRequested && typeof frame.play === 'function') {
+          frame.play();
+        }
+      });
+
+      return true;
+    }
+
     return false;
   };
 
@@ -58,6 +74,11 @@
         JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }),
         '*'
       );
+      return;
+    }
+
+    if (isWistiaVideo && typeof frame.pause === 'function') {
+      frame.pause();
     }
   };
 
@@ -74,6 +95,18 @@
         JSON.stringify({ event: 'command', func: 'seekTo', args: [0, true] }),
         '*'
       );
+      return;
+    }
+
+    if (isWistiaVideo) {
+      if (typeof frame.currentTime === 'number') {
+        frame.currentTime = 0;
+        return;
+      }
+
+      if (typeof frame.time === 'function') {
+        frame.time(0);
+      }
     }
   };
 
@@ -100,6 +133,18 @@
   };
 
   prepareYoutubePlayer();
+
+  const prepareWistiaPlayer = () => {
+    if (!isWistiaVideo) return;
+
+    customElements.whenDefined('wistia-player').then(() => {
+      if (playbackRequested) {
+        requestVideoPlayback();
+      }
+    });
+  };
+
+  prepareWistiaPlayer();
 
   const visibilityRatio = () => {
     if (!frame) return 0;
@@ -200,8 +245,8 @@
     tickers.forEach(syncTicker);
   };
 
-  // YouTube loads eagerly. Playback with audio still waits for the first user
-  // gesture: iframe click handled by YouTube, or scroll/touch/keyboard here.
+  // Wistia/YouTube load eagerly. Playback with audio still waits for the first
+  // user gesture: player click handled natively, or scroll/touch/keyboard here.
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('wheel', startIntroVideo, { passive: true });
   window.addEventListener('touchstart', startIntroVideo, { passive: true });

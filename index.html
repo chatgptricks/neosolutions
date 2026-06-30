@@ -6,20 +6,34 @@
     <title>Neo Solutions Hero</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="css/style.css?v=51">
+    <script src="https://fast.wistia.com/player.js" async></script>
+    <script src="https://fast.wistia.com/embed/ro89dasf7b.js" async type="module"></script>
+    <style>
+      wistia-player[media-id='ro89dasf7b']:not(:defined) {
+        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ro89dasf7b/swatch');
+        display: block;
+        filter: blur(5px);
+        padding-top: 56.25%;
+      }
+
+      wistia-player.showreel__video[media-id='ro89dasf7b']:not(:defined) {
+        background-size: cover;
+        height: 100%;
+        padding-top: 0;
+      }
+    </style>
   </head>
   <body>
     <div class="hero__showreel hero__showreel--top" id="showreel">
       <div class="showreel__inner showreel__inner--top">
         <div class="showreel__frame">
-          <iframe
+          <wistia-player
             class="showreel__video"
-            data-youtube-id="fxCIYrpK6gU"
-            src="https://www.youtube-nocookie.com/embed/fxCIYrpK6gU?enablejsapi=1&playsinline=1&rel=0&modestbranding=1&controls=0&fs=0&disablekb=1&iv_load_policy=3"
-            title="Neo Solutions showreel video"
-            allow="autoplay; encrypted-media; picture-in-picture"
-            allowfullscreen
-            loading="eager"
-          ></iframe>
+            media-id="ro89dasf7b"
+            aspect="1.7777777777777777"
+            preload="auto"
+            fit-strategy="cover"
+          ></wistia-player>
         </div>
       </div>
     </div>
@@ -737,6 +751,6 @@
     <script src="js/impact-scroll.js?v=18"></script>
     <script src="js/launch-steps.js?v=42"></script>
     <script src="js/audience-carousel.js?v=6"></script>
-    <script src="js/showreel.js?v=5"></script>
+    <script src="js/showreel.js?v=6"></script>
   </body>
 </html>
