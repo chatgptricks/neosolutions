@@ -1,32 +1,105 @@
 (() => {
-  const frame = document.querySelector('.showreel__video[data-src]');
+  const frame = document.querySelector('.showreel__video[data-src], .showreel__video[data-youtube-id]');
   const tickers = document.querySelectorAll('.showreel__ticker');
   if (!frame && !tickers.length) return;
 
   const intro = document.querySelector('.hero__showreel--top');
   const isIntroVideo = Boolean(frame && intro?.contains(frame));
+  const isNativeVideo = frame?.tagName === 'VIDEO';
+  const isYoutubeVideo = frame?.tagName === 'IFRAME' && frame.hasAttribute('data-youtube-id');
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
   const easeOutCubic = (value) => 1 - Math.pow(1 - value, 3);
+  let playbackRequested = false;
 
   const requestVideoPlayback = () => {
     if (!frame) return false;
-    const src = frame.getAttribute('data-src');
-    if (!src) return false;
+    playbackRequested = true;
 
-    if (frame.getAttribute('src') !== src) {
-      frame.setAttribute('src', src);
-      frame.setAttribute('preload', 'auto');
-      if (typeof frame.load === 'function') {
-        frame.load();
+    if (isNativeVideo) {
+      const src = frame.getAttribute('data-src');
+      if (!src) return false;
+
+      if (frame.getAttribute('src') !== src) {
+        frame.setAttribute('src', src);
+        frame.setAttribute('preload', 'auto');
+        if (typeof frame.load === 'function') {
+          frame.load();
+        }
       }
+
+      if (typeof frame.play === 'function') {
+        frame.play().catch(() => {});
+      }
+
+      return true;
     }
 
-    if (typeof frame.play === 'function') {
-      frame.play().catch(() => {});
+    if (isYoutubeVideo) {
+      frame.contentWindow?.postMessage(
+        JSON.stringify({ event: 'command', func: 'playVideo', args: [] }),
+        '*'
+      );
+      return true;
     }
 
-    return true;
+    return false;
   };
+
+  const requestVideoPause = () => {
+    if (!frame) return;
+
+    if (isNativeVideo && typeof frame.pause === 'function') {
+      frame.pause();
+      return;
+    }
+
+    if (isYoutubeVideo) {
+      frame.contentWindow?.postMessage(
+        JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }),
+        '*'
+      );
+    }
+  };
+
+  const restartVideo = () => {
+    if (!frame) return;
+
+    if (isNativeVideo) {
+      frame.currentTime = 0;
+      return;
+    }
+
+    if (isYoutubeVideo) {
+      frame.contentWindow?.postMessage(
+        JSON.stringify({ event: 'command', func: 'seekTo', args: [0, true] }),
+        '*'
+      );
+    }
+  };
+
+  const prepareYoutubePlayer = () => {
+    if (!isYoutubeVideo) return;
+
+    const src = frame.getAttribute('src');
+    if (!src) return;
+
+    frame.addEventListener('load', () => {
+      if (playbackRequested) {
+        requestVideoPlayback();
+      } else {
+        requestVideoPause();
+        restartVideo();
+      }
+    }, { once: true });
+
+    const url = new URL(src, window.location.href);
+    if (!url.searchParams.has('origin')) {
+      url.searchParams.set('origin', window.location.origin);
+      frame.setAttribute('src', url.toString());
+    }
+  };
+
+  prepareYoutubePlayer();
 
   const visibilityRatio = () => {
     if (!frame) return 0;
@@ -106,9 +179,11 @@
 
   const startIntroVideoFromClick = () => {
     window.setTimeout(startIntroVideo, 0);
-    window.setTimeout(() => {
-      if (frame?.paused) startIntroVideo();
-    }, 160);
+    if (isNativeVideo) {
+      window.setTimeout(() => {
+        if (frame?.paused) startIntroVideo();
+      }, 160);
+    }
   };
 
   const syncTicker = (tickerEl) => {
@@ -125,19 +200,21 @@
     tickers.forEach(syncTicker);
   };
 
-  // The intro video is preloaded, but playback with audio waits for the first
-  // user gesture: click/pointer inside the video, scroll, touch, or keyboard.
+  // YouTube loads eagerly. Playback with audio still waits for the first user
+  // gesture: iframe click handled by YouTube, or scroll/touch/keyboard here.
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('wheel', startIntroVideo, { passive: true });
   window.addEventListener('touchstart', startIntroVideo, { passive: true });
   window.addEventListener('keydown', startIntroVideo, { passive: true });
   if (isIntroVideo) {
     intro.addEventListener('click', startIntroVideoFromClick, { passive: true, capture: true });
-    frame.addEventListener('play', () => {
-      window.setTimeout(() => {
-        intro.removeEventListener('click', startIntroVideoFromClick, true);
-      }, 220);
-    }, { once: true });
+    if (isNativeVideo) {
+      frame.addEventListener('play', () => {
+        window.setTimeout(() => {
+          intro.removeEventListener('click', startIntroVideoFromClick, true);
+        }, 220);
+      }, { once: true });
+    }
   }
   window.addEventListener('resize', onScroll);
   window.addEventListener('load', onScroll, { once: true });
