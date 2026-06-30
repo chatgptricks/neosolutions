@@ -5,9 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Neo Solutions Hero</title>
     <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="css/style.css?v=47">
+    <link rel="stylesheet" href="css/style.css?v=51">
   </head>
   <body>
+    <div class="hero__showreel hero__showreel--top" id="showreel">
+      <div class="showreel__inner showreel__inner--top">
+        <div class="showreel__frame">
+          <video
+            class="showreel__video"
+            data-src="./Video%20%20%20NeoSolutions%20Final%20.mp4"
+            src="./Video%20%20%20NeoSolutions%20Final%20.mp4"
+            title="Neo Solutions showreel video"
+            poster="showreel-poster.jpg"
+            preload="auto"
+            controls
+            playsinline
+            loop
+          ></video>
+        </div>
+      </div>
+    </div>
+
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__bg" aria-hidden="true">
         <div class="hero__streak"></div>
@@ -209,40 +227,8 @@
           </div>
         </div>
 
-        <div class="hero__showreel" id="showreel" aria-labelledby="showreel-title">
+        <div class="hero__showreel" aria-label="Neo system details">
           <div class="showreel__inner">
-            <div class="showreel__copy">
-              <h2 class="showreel__title" id="showreel-title" data-en="A closer look at the system in motion" data-es="Una mirada más cercana al sistema en movimiento">A closer look at the system in motion</h2>
-            </div>
-
-            <div class="showreel__frame">
-              <video
-                class="showreel__video"
-                data-src="./Video%20%20%20NeoSolutions%20Final%20.mp4"
-                src="about:blank"
-                title="Neo Solutions showreel video"
-                poster="showreel-poster.jpg"
-                preload="none"
-                controls
-                playsinline
-                loop
-              ></video>
-            </div>
-
-            <div class="showreel__reasons">
-              <div class="showreel__reasons-grid">
-                <article class="showreel__reason-card">
-                  <p class="showreel__reason-copy">We do everything.</p>
-                </article>
-                <article class="showreel__reason-card">
-                  <p class="showreel__reason-copy">Trained on your business information</p>
-                </article>
-                <article class="showreel__reason-card">
-                  <p class="showreel__reason-copy">Responds on WhatsApp, Instagram, and Facebook</p>
-                </article>
-              </div>
-            </div>
-
             <div class="showreel__tickers">
               <div class="showreel__ticker-line">
                 <div class="showreel__ticker" aria-hidden="true">
@@ -753,6 +739,6 @@
     <script src="js/impact-scroll.js?v=18"></script>
     <script src="js/launch-steps.js?v=42"></script>
     <script src="js/audience-carousel.js?v=6"></script>
-    <script src="js/showreel.js"></script>
+    <script src="js/showreel.js?v=4"></script>
   </body>
 </html>

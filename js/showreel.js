@@ -3,20 +3,33 @@
   const tickers = document.querySelectorAll('.showreel__ticker');
   if (!frame && !tickers.length) return;
 
-  const loadVideo = () => {
+  const intro = document.querySelector('.hero__showreel--top');
+  const isIntroVideo = Boolean(frame && intro?.contains(frame));
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+  const easeOutCubic = (value) => 1 - Math.pow(1 - value, 3);
+
+  const requestVideoPlayback = () => {
+    if (!frame) return false;
     const src = frame.getAttribute('data-src');
-    if (!src || frame.getAttribute('src') === src) return true;
-    frame.setAttribute('src', src);
-    if (typeof frame.load === 'function') {
-      frame.load();
+    if (!src) return false;
+
+    if (frame.getAttribute('src') !== src) {
+      frame.setAttribute('src', src);
+      frame.setAttribute('preload', 'auto');
+      if (typeof frame.load === 'function') {
+        frame.load();
+      }
     }
+
     if (typeof frame.play === 'function') {
       frame.play().catch(() => {});
     }
+
     return true;
   };
 
   const visibilityRatio = () => {
+    if (!frame) return 0;
     const rect = frame.getBoundingClientRect();
     const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
     if (!rect.height || !viewportHeight) return 0;
@@ -29,14 +42,46 @@
     return visibleHeight / rect.height;
   };
 
+  const syncIntroState = () => {
+    if (!intro) return;
+
+    const scrollRange = Math.max(1, intro.offsetHeight - window.innerHeight);
+    const progress = clamp((window.scrollY - intro.offsetTop) / scrollRange, 0, 1);
+    const morph = easeOutCubic(clamp(progress / 0.86, 0, 1));
+    const isolation = clamp(1 - progress * 1.55, 0, 1);
+    const viewportWidth = window.innerWidth || document.documentElement.clientWidth || 1;
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 1;
+    const contentSource = document.querySelector('.hero__container');
+    const measuredContentWidth = contentSource?.getBoundingClientRect().width;
+    const finalWidth = Math.min(
+      measuredContentWidth || viewportWidth - 104,
+      viewportWidth - 32
+    );
+    const finalHeight = Math.min(finalWidth * 9 / 16, viewportHeight - 48);
+    const frameWidth = viewportWidth + (finalWidth - viewportWidth) * morph;
+    const frameHeight = viewportHeight + (finalHeight - viewportHeight) * morph;
+    const frameRadius = 34 * morph;
+
+    intro.style.setProperty('--intro-progress', progress.toFixed(3));
+    intro.style.setProperty('--intro-isolation', isolation.toFixed(3));
+    intro.style.setProperty('--intro-frame-width', `${frameWidth.toFixed(1)}px`);
+    intro.style.setProperty('--intro-frame-height', `${frameHeight.toFixed(1)}px`);
+    intro.style.setProperty('--intro-frame-radius', `${frameRadius.toFixed(1)}px`);
+    intro.style.setProperty('--intro-frame-border-alpha', (0.18 * morph).toFixed(3));
+    intro.style.setProperty('--intro-frame-bg-alpha', (0.9 * morph).toFixed(3));
+  };
+
   let rafId = 0;
   let loaded = false;
   let intervalId = 0;
   const check = () => {
-    if (loaded) return;
     rafId = 0;
+    syncIntroState();
+    if (loaded || !frame) return;
+    if (isIntroVideo) return;
+
     if (visibilityRatio() >= 0.15) {
-      loaded = loadVideo();
+      loaded = requestVideoPlayback();
       if (intervalId) {
         clearInterval(intervalId);
         intervalId = 0;
@@ -47,6 +92,23 @@
   const onScroll = () => {
     if (rafId) return;
     rafId = window.requestAnimationFrame(check);
+  };
+
+  const startIntroVideo = () => {
+    syncIntroState();
+    if (!isIntroVideo) return;
+    loaded = requestVideoPlayback();
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = 0;
+    }
+  };
+
+  const startIntroVideoFromClick = () => {
+    window.setTimeout(startIntroVideo, 0);
+    window.setTimeout(() => {
+      if (frame?.paused) startIntroVideo();
+    }, 160);
   };
 
   const syncTicker = (tickerEl) => {
@@ -63,12 +125,25 @@
     tickers.forEach(syncTicker);
   };
 
-  // Keep the trigger simple: once the user scrolls near the frame,
-  // swap the URL in and let YouTube autoplay muted.
+  // The intro video is preloaded, but playback with audio waits for the first
+  // user gesture: click/pointer inside the video, scroll, touch, or keyboard.
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('wheel', startIntroVideo, { passive: true });
+  window.addEventListener('touchstart', startIntroVideo, { passive: true });
+  window.addEventListener('keydown', startIntroVideo, { passive: true });
+  if (isIntroVideo) {
+    intro.addEventListener('click', startIntroVideoFromClick, { passive: true, capture: true });
+    frame.addEventListener('play', () => {
+      window.setTimeout(() => {
+        intro.removeEventListener('click', startIntroVideoFromClick, true);
+      }, 220);
+    }, { once: true });
+  }
   window.addEventListener('resize', onScroll);
   window.addEventListener('load', onScroll, { once: true });
-  intervalId = window.setInterval(check, 200);
+  if (!isIntroVideo) {
+    intervalId = window.setInterval(check, 200);
+  }
   syncTickers();
   window.addEventListener('resize', syncTickers, { passive: true });
   onScroll();
