@@ -3,9 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Neo Solutions Hero</title>
-    <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="css/style.css?v=51">
+    <title>Neo Solutions — AI agents that respond, qualify, and book your leads</title>
+    <meta name="description" content="Neo responds to your leads on WhatsApp, Instagram, and Facebook in seconds — qualifying, following up, and booking calls automatically, 24/7." />
+    <link rel="canonical" href="https://chatgptricks.github.io/neosolutions/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Neo Solutions" />
+    <meta property="og:title" content="Neo Solutions — AI agents that respond, qualify, and book your leads" />
+    <meta property="og:description" content="Neo responds to your leads on WhatsApp, Instagram, and Facebook in seconds — qualifying, following up, and booking calls automatically, 24/7." />
+    <meta property="og:url" content="https://chatgptricks.github.io/neosolutions/" />
+    <meta property="og:image" content="https://chatgptricks.github.io/neosolutions/showreel-poster.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Neo Solutions — AI agents that respond, qualify, and book your leads" />
+    <meta name="twitter:description" content="Neo responds to your leads on WhatsApp, Instagram, and Facebook in seconds — qualifying, following up, and booking calls automatically, 24/7." />
+    <meta name="twitter:image" content="https://chatgptricks.github.io/neosolutions/showreel-poster.jpg" />
+    <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+    <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fast.wistia.com" />
+    <link rel="stylesheet" href="css/style.css?v=59">
     <script src="https://fast.wistia.com/player.js" async></script>
     <script src="https://fast.wistia.com/embed/ro89dasf7b.js" async type="module"></script>
     <style>
@@ -22,6 +36,39 @@
         padding-top: 0;
       }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which channels can Neo handle?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Neo is designed for inbound leads from WhatsApp, Instagram, Facebook, and website forms. During setup, we define which channels should be connected first." }
+        },
+        {
+          "@type": "Question",
+          "name": "What do you need from my business?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We need your offer details, common questions, qualification criteria, calendar rules, and examples of how your team normally replies to leads." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a human take over a conversation?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We define the handoff rules with you so Neo knows when to qualify, when to book, and when to send the lead to your team." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to go live?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most launches are scoped around a 7-day window once we have the required business information, channel access, and approval on the response flow." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Neo respond in Spanish and English?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The agent can be trained for your language needs, including bilingual lead flows, tone rules, and channel-specific response patterns." }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div class="hero__showreel hero__showreel--top" id="showreel">
@@ -52,7 +99,7 @@
       <div class="hero__container">
         <div class="hero__logo-area">
           <div class="brand" aria-label="Neo Solutions">
-            <img src="Animated White.webp" class="brand__logo-img" alt="Neo Solutions">
+            <img src="assets/brand/neo-logo-white.webp" class="brand__logo-img" alt="Neo Solutions">
           </div>
         </div>
 
@@ -61,11 +108,12 @@
             <a href="#why-neo" class="nav-link" data-en="Why Neo" data-es="Por qué Neo">Why Neo</a>
             <a href="#how-it-works" class="nav-link" data-en="How it works" data-es="Cómo funciona">How it works</a>
             <a href="#audience" class="nav-link" data-en="Who it's for" data-es="Para quién">Who it's for</a>
+            <a href="#pricing" class="nav-link" data-en="Pricing" data-es="Precios">Pricing</a>
           </nav>
           <div class="nav-actions">
             <div class="lang-switch">
-              <button class="lang-switch__btn is-active" id="btn-en" onclick="setLanguage('en')">EN</button>
-              <button class="lang-switch__btn" id="btn-es" onclick="setLanguage('es')">ES</button>
+              <button class="lang-switch__btn is-active" id="btn-en" type="button" aria-pressed="true" onclick="setLanguage('en')">EN</button>
+              <button class="lang-switch__btn" id="btn-es" type="button" aria-pressed="false" onclick="setLanguage('es')">ES</button>
             </div>
             <a href="https://cal.com/neosolutions" target="_blank" rel="noopener" class="nav-btn" data-en="Book Call" data-es="Agendar Llamada">
               Book Call
@@ -99,7 +147,7 @@
             <div class="demo__layout">
               <aside class="demo__rail">
                 <div class="rail__brand module">
-                  <img src="Animated White.webp" class="rail__brand-logo" alt="Neo Solutions">
+                  <img src="assets/brand/neo-logo-white.webp" class="rail__brand-logo" alt="Neo Solutions">
                   <div class="rail__title" data-en="<strong>Neo Agent</strong><span>● Online</span>" data-es="<strong>Neo Agente</strong><span>● En línea</span>">
                     <strong>Neo Agent</strong>
                     <span>● Online</span>
@@ -246,30 +294,30 @@
                 <div class="showreel__ticker" aria-hidden="true">
                   <div class="showreel__ticker-track">
                     <div class="showreel__ticker-group">
-                      <span class="showreel__bubble">Need a quick quote for tomorrow?</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Can you reply today?</span>
-                      <span class="showreel__bubble">We want to book a call this week.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Are you available after 6?</span>
-                      <span class="showreel__bubble">Please send pricing and next steps.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">I have a few questions first.</span>
+                      <span class="showreel__bubble" data-en="Need a quick quote for tomorrow?" data-es="¿Me pasan una cotización rápida para mañana?">Need a quick quote for tomorrow?</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Can you reply today?" data-es="¿Pueden responder hoy?">Can you reply today?</span>
+                      <span class="showreel__bubble" data-en="We want to book a call this week." data-es="Queremos agendar una llamada esta semana.">We want to book a call this week.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Are you available after 6?" data-es="¿Están disponibles después de las 6?">Are you available after 6?</span>
+                      <span class="showreel__bubble" data-en="Please send pricing and next steps." data-es="Envíenme precios y próximos pasos.">Please send pricing and next steps.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="I have a few questions first." data-es="Primero tengo algunas preguntas.">I have a few questions first.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                     <div class="showreel__ticker-group" aria-hidden="true">
-                      <span class="showreel__bubble">Need a quick quote for tomorrow?</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Can you reply today?</span>
-                      <span class="showreel__bubble">We want to book a call this week.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Are you available after 6?</span>
-                      <span class="showreel__bubble">Please send pricing and next steps.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">I have a few questions first.</span>
+                      <span class="showreel__bubble" data-en="Need a quick quote for tomorrow?" data-es="¿Me pasan una cotización rápida para mañana?">Need a quick quote for tomorrow?</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Can you reply today?" data-es="¿Pueden responder hoy?">Can you reply today?</span>
+                      <span class="showreel__bubble" data-en="We want to book a call this week." data-es="Queremos agendar una llamada esta semana.">We want to book a call this week.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Are you available after 6?" data-es="¿Están disponibles después de las 6?">Are you available after 6?</span>
+                      <span class="showreel__bubble" data-en="Please send pricing and next steps." data-es="Envíenme precios y próximos pasos.">Please send pricing and next steps.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="I have a few questions first." data-es="Primero tengo algunas preguntas.">I have a few questions first.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                     <div class="showreel__ticker-group" aria-hidden="true">
-                      <span class="showreel__bubble">Need a quick quote for tomorrow?</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Can you reply today?</span>
-                      <span class="showreel__bubble">We want to book a call this week.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Are you available after 6?</span>
-                      <span class="showreel__bubble">Please send pricing and next steps.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">I have a few questions first.</span>
+                      <span class="showreel__bubble" data-en="Need a quick quote for tomorrow?" data-es="¿Me pasan una cotización rápida para mañana?">Need a quick quote for tomorrow?</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Can you reply today?" data-es="¿Pueden responder hoy?">Can you reply today?</span>
+                      <span class="showreel__bubble" data-en="We want to book a call this week." data-es="Queremos agendar una llamada esta semana.">We want to book a call this week.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Are you available after 6?" data-es="¿Están disponibles después de las 6?">Are you available after 6?</span>
+                      <span class="showreel__bubble" data-en="Please send pricing and next steps." data-es="Envíenme precios y próximos pasos.">Please send pricing and next steps.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="I have a few questions first." data-es="Primero tengo algunas preguntas.">I have a few questions first.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                   </div>
@@ -280,66 +328,66 @@
                 <div class="showreel__ticker showreel__ticker--reverse" aria-hidden="true">
                   <div class="showreel__ticker-track">
                     <div class="showreel__ticker-group">
-                      <span class="showreel__bubble">New lead from WhatsApp came in.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Customer asked for pricing details.</span>
-                      <span class="showreel__bubble">Someone wants to schedule a demo.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Message needs a qualified reply.</span>
-                      <span class="showreel__bubble">Follow up before the lead goes cold.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Book the call and confirm the slot.</span>
+                      <span class="showreel__bubble" data-en="New lead from WhatsApp came in." data-es="Entró un nuevo lead por WhatsApp.">New lead from WhatsApp came in.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Customer asked for pricing details." data-es="Un cliente pidió detalles de precios.">Customer asked for pricing details.</span>
+                      <span class="showreel__bubble" data-en="Someone wants to schedule a demo." data-es="Alguien quiere agendar una demo.">Someone wants to schedule a demo.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Message needs a qualified reply." data-es="Un mensaje espera respuesta calificada.">Message needs a qualified reply.</span>
+                      <span class="showreel__bubble" data-en="Follow up before the lead goes cold." data-es="Da seguimiento antes de que el lead se enfríe.">Follow up before the lead goes cold.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Book the call and confirm the slot." data-es="Agenda la llamada y confirma el horario.">Book the call and confirm the slot.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                     <div class="showreel__ticker-group" aria-hidden="true">
-                      <span class="showreel__bubble">New lead from WhatsApp came in.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Customer asked for pricing details.</span>
-                      <span class="showreel__bubble">Someone wants to schedule a demo.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Message needs a qualified reply.</span>
-                      <span class="showreel__bubble">Follow up before the lead goes cold.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Book the call and confirm the slot.</span>
+                      <span class="showreel__bubble" data-en="New lead from WhatsApp came in." data-es="Entró un nuevo lead por WhatsApp.">New lead from WhatsApp came in.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Customer asked for pricing details." data-es="Un cliente pidió detalles de precios.">Customer asked for pricing details.</span>
+                      <span class="showreel__bubble" data-en="Someone wants to schedule a demo." data-es="Alguien quiere agendar una demo.">Someone wants to schedule a demo.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Message needs a qualified reply." data-es="Un mensaje espera respuesta calificada.">Message needs a qualified reply.</span>
+                      <span class="showreel__bubble" data-en="Follow up before the lead goes cold." data-es="Da seguimiento antes de que el lead se enfríe.">Follow up before the lead goes cold.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Book the call and confirm the slot." data-es="Agenda la llamada y confirma el horario.">Book the call and confirm the slot.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                     <div class="showreel__ticker-group" aria-hidden="true">
-                      <span class="showreel__bubble">New lead from WhatsApp came in.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Customer asked for pricing details.</span>
-                      <span class="showreel__bubble">Someone wants to schedule a demo.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Message needs a qualified reply.</span>
-                      <span class="showreel__bubble">Follow up before the lead goes cold.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Book the call and confirm the slot.</span>
+                      <span class="showreel__bubble" data-en="New lead from WhatsApp came in." data-es="Entró un nuevo lead por WhatsApp.">New lead from WhatsApp came in.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Customer asked for pricing details." data-es="Un cliente pidió detalles de precios.">Customer asked for pricing details.</span>
+                      <span class="showreel__bubble" data-en="Someone wants to schedule a demo." data-es="Alguien quiere agendar una demo.">Someone wants to schedule a demo.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Message needs a qualified reply." data-es="Un mensaje espera respuesta calificada.">Message needs a qualified reply.</span>
+                      <span class="showreel__bubble" data-en="Follow up before the lead goes cold." data-es="Da seguimiento antes de que el lead se enfríe.">Follow up before the lead goes cold.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Book the call and confirm the slot." data-es="Agenda la llamada y confirma el horario.">Book the call and confirm the slot.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="showreel__ticker-title">Turn every message into a qualified opportunity.</div>
+              <div class="showreel__ticker-title" data-en="Turn every message into a qualified opportunity." data-es="Convierte cada mensaje en una oportunidad calificada.">Turn every message into a qualified opportunity.</div>
 
               <div class="showreel__ticker-line showreel__ticker-line--center">
                 <div class="showreel__ticker" aria-hidden="true">
                   <div class="showreel__ticker-track">
                     <div class="showreel__ticker-group">
-                      <span class="showreel__bubble">A message asks about pricing.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The lead wants to talk today.</span>
-                      <span class="showreel__bubble">Qualification starts immediately.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Auto follow-up keeps momentum.</span>
-                      <span class="showreel__bubble">No more cold inboxes.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Every reply moves the deal forward.</span>
+                      <span class="showreel__bubble" data-en="A message asks about pricing." data-es="Un mensaje pregunta por precios.">A message asks about pricing.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The lead wants to talk today." data-es="El lead quiere hablar hoy.">The lead wants to talk today.</span>
+                      <span class="showreel__bubble" data-en="Qualification starts immediately." data-es="La calificación empieza de inmediato.">Qualification starts immediately.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Auto follow-up keeps momentum." data-es="El seguimiento automático mantiene el ritmo.">Auto follow-up keeps momentum.</span>
+                      <span class="showreel__bubble" data-en="No more cold inboxes." data-es="Se acabaron las bandejas frías.">No more cold inboxes.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Every reply moves the deal forward." data-es="Cada respuesta acerca el cierre.">Every reply moves the deal forward.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                     <div class="showreel__ticker-group" aria-hidden="true">
-                      <span class="showreel__bubble">A message asks about pricing.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The lead wants to talk today.</span>
-                      <span class="showreel__bubble">Qualification starts immediately.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Auto follow-up keeps momentum.</span>
-                      <span class="showreel__bubble">No more cold inboxes.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Every reply moves the deal forward.</span>
+                      <span class="showreel__bubble" data-en="A message asks about pricing." data-es="Un mensaje pregunta por precios.">A message asks about pricing.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The lead wants to talk today." data-es="El lead quiere hablar hoy.">The lead wants to talk today.</span>
+                      <span class="showreel__bubble" data-en="Qualification starts immediately." data-es="La calificación empieza de inmediato.">Qualification starts immediately.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Auto follow-up keeps momentum." data-es="El seguimiento automático mantiene el ritmo.">Auto follow-up keeps momentum.</span>
+                      <span class="showreel__bubble" data-en="No more cold inboxes." data-es="Se acabaron las bandejas frías.">No more cold inboxes.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Every reply moves the deal forward." data-es="Cada respuesta acerca el cierre.">Every reply moves the deal forward.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                     <div class="showreel__ticker-group" aria-hidden="true">
-                      <span class="showreel__bubble">A message asks about pricing.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The lead wants to talk today.</span>
-                      <span class="showreel__bubble">Qualification starts immediately.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Auto follow-up keeps momentum.</span>
-                      <span class="showreel__bubble">No more cold inboxes.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Every reply moves the deal forward.</span>
+                      <span class="showreel__bubble" data-en="A message asks about pricing." data-es="Un mensaje pregunta por precios.">A message asks about pricing.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The lead wants to talk today." data-es="El lead quiere hablar hoy.">The lead wants to talk today.</span>
+                      <span class="showreel__bubble" data-en="Qualification starts immediately." data-es="La calificación empieza de inmediato.">Qualification starts immediately.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Auto follow-up keeps momentum." data-es="El seguimiento automático mantiene el ritmo.">Auto follow-up keeps momentum.</span>
+                      <span class="showreel__bubble" data-en="No more cold inboxes." data-es="Se acabaron las bandejas frías.">No more cold inboxes.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Every reply moves the deal forward." data-es="Cada respuesta acerca el cierre.">Every reply moves the deal forward.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                   </div>
@@ -350,30 +398,30 @@
                 <div class="showreel__ticker showreel__ticker--reverse" aria-hidden="true">
                   <div class="showreel__ticker-track">
                     <div class="showreel__ticker-group">
-                      <span class="showreel__bubble">Fast replies stop leads from cooling off.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The agent books the next step.</span>
-                      <span class="showreel__bubble">Questions get answered instantly.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Intent is qualified before handoff.</span>
-                      <span class="showreel__bubble">The calendar fills itself.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The inbox stays under control.</span>
+                      <span class="showreel__bubble" data-en="Fast replies stop leads from cooling off." data-es="Responder rápido evita que los leads se enfríen.">Fast replies stop leads from cooling off.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The agent books the next step." data-es="El agente agenda el siguiente paso.">The agent books the next step.</span>
+                      <span class="showreel__bubble" data-en="Questions get answered instantly." data-es="Las preguntas se responden al instante.">Questions get answered instantly.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Intent is qualified before handoff." data-es="La intención se califica antes de pasar al equipo.">Intent is qualified before handoff.</span>
+                      <span class="showreel__bubble" data-en="The calendar fills itself." data-es="El calendario se llena solo.">The calendar fills itself.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The inbox stays under control." data-es="La bandeja queda bajo control.">The inbox stays under control.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                     <div class="showreel__ticker-group" aria-hidden="true">
-                      <span class="showreel__bubble">Fast replies stop leads from cooling off.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The agent books the next step.</span>
-                      <span class="showreel__bubble">Questions get answered instantly.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Intent is qualified before handoff.</span>
-                      <span class="showreel__bubble">The calendar fills itself.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The inbox stays under control.</span>
+                      <span class="showreel__bubble" data-en="Fast replies stop leads from cooling off." data-es="Responder rápido evita que los leads se enfríen.">Fast replies stop leads from cooling off.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The agent books the next step." data-es="El agente agenda el siguiente paso.">The agent books the next step.</span>
+                      <span class="showreel__bubble" data-en="Questions get answered instantly." data-es="Las preguntas se responden al instante.">Questions get answered instantly.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Intent is qualified before handoff." data-es="La intención se califica antes de pasar al equipo.">Intent is qualified before handoff.</span>
+                      <span class="showreel__bubble" data-en="The calendar fills itself." data-es="El calendario se llena solo.">The calendar fills itself.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The inbox stays under control." data-es="La bandeja queda bajo control.">The inbox stays under control.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                     <div class="showreel__ticker-group" aria-hidden="true">
-                      <span class="showreel__bubble">Fast replies stop leads from cooling off.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The agent books the next step.</span>
-                      <span class="showreel__bubble">Questions get answered instantly.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Intent is qualified before handoff.</span>
-                      <span class="showreel__bubble">The calendar fills itself.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The inbox stays under control.</span>
+                      <span class="showreel__bubble" data-en="Fast replies stop leads from cooling off." data-es="Responder rápido evita que los leads se enfríen.">Fast replies stop leads from cooling off.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The agent books the next step." data-es="El agente agenda el siguiente paso.">The agent books the next step.</span>
+                      <span class="showreel__bubble" data-en="Questions get answered instantly." data-es="Las preguntas se responden al instante.">Questions get answered instantly.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Intent is qualified before handoff." data-es="La intención se califica antes de pasar al equipo.">Intent is qualified before handoff.</span>
+                      <span class="showreel__bubble" data-en="The calendar fills itself." data-es="El calendario se llena solo.">The calendar fills itself.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The inbox stays under control." data-es="La bandeja queda bajo control.">The inbox stays under control.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                   </div>
@@ -384,30 +432,30 @@
                 <div class="showreel__ticker" aria-hidden="true">
                   <div class="showreel__ticker-track">
                     <div class="showreel__ticker-group">
-                      <span class="showreel__bubble">Every response feels immediate.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Every lead gets a next step.</span>
-                      <span class="showreel__bubble">The follow-up never drops.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The conversation keeps moving.</span>
-                      <span class="showreel__bubble">The inbox stays organized.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The calendar fills with qualified calls.</span>
+                      <span class="showreel__bubble" data-en="Every response feels immediate." data-es="Cada respuesta se siente inmediata.">Every response feels immediate.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Every lead gets a next step." data-es="Cada lead recibe un próximo paso.">Every lead gets a next step.</span>
+                      <span class="showreel__bubble" data-en="The follow-up never drops." data-es="El seguimiento nunca se pierde.">The follow-up never drops.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The conversation keeps moving." data-es="La conversación sigue avanzando.">The conversation keeps moving.</span>
+                      <span class="showreel__bubble" data-en="The inbox stays organized." data-es="La bandeja se mantiene organizada.">The inbox stays organized.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The calendar fills with qualified calls." data-es="El calendario se llena de llamadas calificadas.">The calendar fills with qualified calls.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                     <div class="showreel__ticker-group" aria-hidden="true">
-                      <span class="showreel__bubble">Every response feels immediate.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Every lead gets a next step.</span>
-                      <span class="showreel__bubble">The follow-up never drops.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The conversation keeps moving.</span>
-                      <span class="showreel__bubble">The inbox stays organized.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The calendar fills with qualified calls.</span>
+                      <span class="showreel__bubble" data-en="Every response feels immediate." data-es="Cada respuesta se siente inmediata.">Every response feels immediate.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Every lead gets a next step." data-es="Cada lead recibe un próximo paso.">Every lead gets a next step.</span>
+                      <span class="showreel__bubble" data-en="The follow-up never drops." data-es="El seguimiento nunca se pierde.">The follow-up never drops.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The conversation keeps moving." data-es="La conversación sigue avanzando.">The conversation keeps moving.</span>
+                      <span class="showreel__bubble" data-en="The inbox stays organized." data-es="La bandeja se mantiene organizada.">The inbox stays organized.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The calendar fills with qualified calls." data-es="El calendario se llena de llamadas calificadas.">The calendar fills with qualified calls.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                     <div class="showreel__ticker-group" aria-hidden="true">
-                      <span class="showreel__bubble">Every response feels immediate.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Every lead gets a next step.</span>
-                      <span class="showreel__bubble">The follow-up never drops.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The conversation keeps moving.</span>
-                      <span class="showreel__bubble">The inbox stays organized.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">The calendar fills with qualified calls.</span>
+                      <span class="showreel__bubble" data-en="Every response feels immediate." data-es="Cada respuesta se siente inmediata.">Every response feels immediate.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Every lead gets a next step." data-es="Cada lead recibe un próximo paso.">Every lead gets a next step.</span>
+                      <span class="showreel__bubble" data-en="The follow-up never drops." data-es="El seguimiento nunca se pierde.">The follow-up never drops.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The conversation keeps moving." data-es="La conversación sigue avanzando.">The conversation keeps moving.</span>
+                      <span class="showreel__bubble" data-en="The inbox stays organized." data-es="La bandeja se mantiene organizada.">The inbox stays organized.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="The calendar fills with qualified calls." data-es="El calendario se llena de llamadas calificadas.">The calendar fills with qualified calls.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                   </div>
@@ -418,30 +466,30 @@
                 <div class="showreel__ticker showreel__ticker--reverse" aria-hidden="true">
                   <div class="showreel__ticker-track">
                     <div class="showreel__ticker-group">
-                      <span class="showreel__bubble">Reply before the lead cools off.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Turn interest into a booked call.</span>
-                      <span class="showreel__bubble">Capture every inbound message.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Qualify without delay.</span>
-                      <span class="showreel__bubble">Keep the pipeline moving.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Never miss the first response.</span>
+                      <span class="showreel__bubble" data-en="Reply before the lead cools off." data-es="Responde antes de que el lead se enfríe.">Reply before the lead cools off.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Turn interest into a booked call." data-es="Convierte el interés en una llamada agendada.">Turn interest into a booked call.</span>
+                      <span class="showreel__bubble" data-en="Capture every inbound message." data-es="Captura cada mensaje entrante.">Capture every inbound message.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Qualify without delay." data-es="Califica sin demora.">Qualify without delay.</span>
+                      <span class="showreel__bubble" data-en="Keep the pipeline moving." data-es="Mantén el pipeline en movimiento.">Keep the pipeline moving.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Never miss the first response." data-es="Nunca pierdas la primera respuesta.">Never miss the first response.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                     <div class="showreel__ticker-group" aria-hidden="true">
-                      <span class="showreel__bubble">Reply before the lead cools off.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Turn interest into a booked call.</span>
-                      <span class="showreel__bubble">Capture every inbound message.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Qualify without delay.</span>
-                      <span class="showreel__bubble">Keep the pipeline moving.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Never miss the first response.</span>
+                      <span class="showreel__bubble" data-en="Reply before the lead cools off." data-es="Responde antes de que el lead se enfríe.">Reply before the lead cools off.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Turn interest into a booked call." data-es="Convierte el interés en una llamada agendada.">Turn interest into a booked call.</span>
+                      <span class="showreel__bubble" data-en="Capture every inbound message." data-es="Captura cada mensaje entrante.">Capture every inbound message.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Qualify without delay." data-es="Califica sin demora.">Qualify without delay.</span>
+                      <span class="showreel__bubble" data-en="Keep the pipeline moving." data-es="Mantén el pipeline en movimiento.">Keep the pipeline moving.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Never miss the first response." data-es="Nunca pierdas la primera respuesta.">Never miss the first response.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                     <div class="showreel__ticker-group" aria-hidden="true">
-                      <span class="showreel__bubble">Reply before the lead cools off.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Turn interest into a booked call.</span>
-                      <span class="showreel__bubble">Capture every inbound message.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Qualify without delay.</span>
-                      <span class="showreel__bubble">Keep the pipeline moving.</span>
-                      <span class="showreel__bubble showreel__bubble--wide">Never miss the first response.</span>
+                      <span class="showreel__bubble" data-en="Reply before the lead cools off." data-es="Responde antes de que el lead se enfríe.">Reply before the lead cools off.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Turn interest into a booked call." data-es="Convierte el interés en una llamada agendada.">Turn interest into a booked call.</span>
+                      <span class="showreel__bubble" data-en="Capture every inbound message." data-es="Captura cada mensaje entrante.">Capture every inbound message.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Qualify without delay." data-es="Califica sin demora.">Qualify without delay.</span>
+                      <span class="showreel__bubble" data-en="Keep the pipeline moving." data-es="Mantén el pipeline en movimiento.">Keep the pipeline moving.</span>
+                      <span class="showreel__bubble showreel__bubble--wide" data-en="Never miss the first response." data-es="Nunca pierdas la primera respuesta.">Never miss the first response.</span>
                       <span class="showreel__ticker-seam" aria-hidden="true"></span>
                     </div>
                   </div>
@@ -452,16 +500,16 @@
             <div class="showreel__outro">
               <div class="showreel__outro-grid">
                 <article class="showreel__outro-item">
-                  <h3 class="showreel__outro-title">Stop losing leads to slow replies</h3>
-                  <p class="showreel__outro-copy">Your AI Agent responds in seconds. Every message, every channel, 24/7. People need breaks. Your Agent does not.</p>
+                  <h3 class="showreel__outro-title" data-en="Stop losing leads to slow replies" data-es="Deja de perder leads por respuestas lentas">Stop losing leads to slow replies</h3>
+                  <p class="showreel__outro-copy" data-en="Your AI Agent responds in seconds. Every message, every channel, 24/7. People need breaks. Your Agent does not." data-es="Tu Agente de IA responde en segundos. Cada mensaje, cada canal, 24/7. Las personas necesitan descansos. Tu Agente no.">Your AI Agent responds in seconds. Every message, every channel, 24/7. People need breaks. Your Agent does not.</p>
                 </article>
                 <article class="showreel__outro-item">
-                  <h3 class="showreel__outro-title">Replace manual follow-up</h3>
-                  <p class="showreel__outro-copy">No full-time assistant. No commission-based rep. Neo qualifies, asks the right questions, and moves each prospect to the next step.</p>
+                  <h3 class="showreel__outro-title" data-en="Replace manual follow-up" data-es="Reemplaza el seguimiento manual">Replace manual follow-up</h3>
+                  <p class="showreel__outro-copy" data-en="No full-time assistant. No commission-based rep. Neo qualifies, asks the right questions, and moves each prospect to the next step." data-es="Sin asistente de tiempo completo. Sin vendedor a comisión. Neo califica, hace las preguntas correctas y lleva a cada prospecto al siguiente paso.">No full-time assistant. No commission-based rep. Neo qualifies, asks the right questions, and moves each prospect to the next step.</p>
                 </article>
                 <article class="showreel__outro-item">
-                  <h3 class="showreel__outro-title">We build the entire system for you.</h3>
-                  <p class="showreel__outro-copy">We define your tone, qualification questions, and handoff rules with you. Then we build and deploy the full system so you never touch the technical setup.</p>
+                  <h3 class="showreel__outro-title" data-en="We build the entire system for you." data-es="Construimos todo el sistema por ti.">We build the entire system for you.</h3>
+                  <p class="showreel__outro-copy" data-en="We define your tone, qualification questions, and handoff rules with you. Then we build and deploy the full system so you never touch the technical setup." data-es="Definimos contigo tu tono, preguntas de calificación y reglas de entrega. Luego construimos y desplegamos el sistema completo para que nunca toques la parte técnica.">We define your tone, qualification questions, and handoff rules with you. Then we build and deploy the full system so you never touch the technical setup.</p>
                 </article>
               </div>
             </div>
@@ -470,43 +518,43 @@
               <div class="impact__inner">
                 <div class="impact__messages" aria-label="Incoming lead messages">
                   <div class="impact__bubble impact__bubble--1">
-                    <img class="impact__bubble-image" src="assets/impact/bubble1.png" alt="" />
+                    <img class="impact__bubble-image" loading="lazy" src="assets/impact/bubble1.png" alt="" />
                   </div>
                   <div class="impact__bubble impact__bubble--2">
-                    <img class="impact__bubble-image" src="assets/impact/bubble2.png" alt="" />
+                    <img class="impact__bubble-image" loading="lazy" src="assets/impact/bubble2.png" alt="" />
                   </div>
                   <div class="impact__bubble impact__bubble--3">
-                    <img class="impact__bubble-image" src="assets/impact/bubble3.png" alt="" />
+                    <img class="impact__bubble-image" loading="lazy" src="assets/impact/bubble3.png" alt="" />
                   </div>
                   <div class="impact__bubble impact__bubble--4">
-                    <img class="impact__bubble-image" src="assets/impact/bubble4.png" alt="" />
+                    <img class="impact__bubble-image" loading="lazy" src="assets/impact/bubble4.png" alt="" />
                   </div>
                   <div class="impact__bubble impact__bubble--5">
-                    <img class="impact__bubble-image" src="assets/impact/bubble5.png" alt="" />
+                    <img class="impact__bubble-image" loading="lazy" src="assets/impact/bubble5.png" alt="" />
                   </div>
                 </div>
                 <div class="impact__content">
                   <div class="impact__hero">
-                    <h2 class="impact__title" id="impact-title">If you do not respond in 5 minutes, your competition might.</h2>
+                    <h2 class="impact__title" id="impact-title" data-en="If you do not respond in 5 minutes, your competition might." data-es="Si no respondes en 5 minutos, tu competencia podría hacerlo.">If you do not respond in 5 minutes, your competition might.</h2>
                     <div class="impact__pulse">
                       <div class="impact__clock" aria-hidden="true">
                         <span>5</span>
                         <small>min</small>
                       </div>
-                      <p class="impact__pulse-copy">That window decides whether a lead stays warm or disappears into a faster inbox.</p>
+                      <p class="impact__pulse-copy" data-en="That window decides whether a lead stays warm or disappears into a faster inbox." data-es="Esa ventana decide si un lead se mantiene caliente o desaparece en una bandeja más rápida.">That window decides whether a lead stays warm or disappears into a faster inbox.</p>
                     </div>
                   </div>
 
                   <div class="impact__board" role="table" aria-label="Response speed and revenue impact comparison">
                     <div class="impact__board-head" role="row">
-                      <span role="columnheader">Metric</span>
-                      <span role="columnheader">Human team</span>
-                      <span role="columnheader">Neo AI agent</span>
-                      <span role="columnheader">Revenue impact</span>
+                      <span role="columnheader" data-en="Metric" data-es="Métrica">Metric</span>
+                      <span role="columnheader" data-en="Human team" data-es="Equipo humano">Human team</span>
+                      <span role="columnheader" data-en="Neo AI agent" data-es="Agente de IA Neo">Neo AI agent</span>
+                      <span role="columnheader" data-en="Revenue impact" data-es="Impacto en ingresos">Revenue impact</span>
                     </div>
 
                     <article class="impact__row" role="row">
-                      <div class="impact__metric" role="cell">Chats without a reply</div>
+                      <div class="impact__metric" role="cell" data-en="Chats without a reply" data-es="Chats sin respuesta">Chats without a reply</div>
                       <div class="impact__comparison impact__comparison--human" role="cell">
                         <div class="impact__label">78%</div>
                         <div class="impact__track"><span class="impact__fill" style="width: 78%"></span></div>
@@ -515,37 +563,37 @@
                         <div class="impact__label impact__label--neo">0%</div>
                         <div class="impact__track impact__track--neo"><span class="impact__fill impact__fill--neo" style="width: 6%"></span></div>
                       </div>
-                      <div class="impact__revenue" role="cell">+$8k-$18k/month</div>
+                      <div class="impact__revenue" role="cell" data-en="+$8k-$18k/month" data-es="+$8k-$18k/mes">+$8k-$18k/month</div>
                     </article>
 
                     <article class="impact__row" role="row">
-                      <div class="impact__metric" role="cell">Availability</div>
+                      <div class="impact__metric" role="cell" data-en="Availability" data-es="Disponibilidad">Availability</div>
                       <div class="impact__comparison impact__comparison--human" role="cell">
-                        <div class="impact__label">8 hours/day</div>
+                        <div class="impact__label" data-en="8 hours/day" data-es="8 horas/día">8 hours/day</div>
                         <div class="impact__track"><span class="impact__fill" style="width: 33%"></span></div>
                       </div>
                       <div class="impact__comparison impact__comparison--neo" role="cell">
                         <div class="impact__label impact__label--neo">24/7</div>
                         <div class="impact__track impact__track--neo"><span class="impact__fill impact__fill--neo" style="width: 100%"></span></div>
                       </div>
-                      <div class="impact__revenue" role="cell">+$6k-$14k/month</div>
+                      <div class="impact__revenue" role="cell" data-en="+$6k-$14k/month" data-es="+$6k-$14k/mes">+$6k-$14k/month</div>
                     </article>
 
                     <article class="impact__row" role="row">
-                      <div class="impact__metric" role="cell">Response time</div>
+                      <div class="impact__metric" role="cell" data-en="Response time" data-es="Tiempo de respuesta">Response time</div>
                       <div class="impact__comparison impact__comparison--human" role="cell">
                         <div class="impact__label">~34 min</div>
                         <div class="impact__track"><span class="impact__fill" style="width: 82%"></span></div>
                       </div>
                       <div class="impact__comparison impact__comparison--neo" role="cell">
-                        <div class="impact__label impact__label--neo">&lt;1 second</div>
+                        <div class="impact__label impact__label--neo" data-en="&lt;1 second" data-es="&lt;1 segundo">&lt;1 second</div>
                         <div class="impact__track impact__track--neo"><span class="impact__fill impact__fill--neo" style="width: 10%"></span></div>
                       </div>
-                      <div class="impact__revenue" role="cell">+$4k-$10k/month</div>
+                      <div class="impact__revenue" role="cell" data-en="+$4k-$10k/month" data-es="+$4k-$10k/mes">+$4k-$10k/month</div>
                     </article>
 
                     <article class="impact__row" role="row">
-                      <div class="impact__metric" role="cell">Lead conversion rate</div>
+                      <div class="impact__metric" role="cell" data-en="Lead conversion rate" data-es="Tasa de conversión de leads">Lead conversion rate</div>
                       <div class="impact__comparison impact__comparison--human" role="cell">
                         <div class="impact__label">23%</div>
                         <div class="impact__track"><span class="impact__fill" style="width: 42%"></span></div>
@@ -554,7 +602,7 @@
                         <div class="impact__label impact__label--neo">48%</div>
                         <div class="impact__track impact__track--neo"><span class="impact__fill impact__fill--neo" style="width: 86%"></span></div>
                       </div>
-                      <div class="impact__revenue" role="cell">+$15k-$40k/month</div>
+                      <div class="impact__revenue" role="cell" data-en="+$15k-$40k/month" data-es="+$15k-$40k/mes">+$15k-$40k/month</div>
                     </article>
                   </div>
                 </div>
@@ -690,7 +738,7 @@
               <div class="audience__viewport" data-carousel-viewport>
                 <div class="audience__track" role="list">
                   <article class="audience__card" role="listitem">
-                    <video class="audience__image" src="assets/audience/audience_leads.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                    <video class="audience__image" src="assets/audience/audience_leads.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
                     <div class="audience__copy">
                       <h3 data-en="For businesses already generating leads" data-es="Para negocios que ya generan leads">For businesses already generating leads</h3>
                       <p data-en="Coaches, consultants, clinics, local businesses, and agencies can use Neo to respond, qualify, and book automatically" data-es="Coaches, consultores, clínicas, negocios locales y agencias pueden usar Neo para responder, calificar y agendar automáticamente">Coaches, consultants, clinics, local businesses, and agencies can use Neo to respond, qualify, and book automatically</p>
@@ -698,7 +746,7 @@
                   </article>
 
                   <article class="audience__card" role="listitem">
-                    <video class="audience__image" src="assets/audience/audience_ads.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                    <video class="audience__image" src="assets/audience/audience_ads.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
                     <div class="audience__copy">
                       <h3 data-en="For businesses running paid ads" data-es="Para negocios con anuncios activos">For businesses running paid ads</h3>
                       <p data-en="If leads come from Meta, Google, WhatsApp, Instagram, Facebook, or website forms, Neo reaches them before they go cold" data-es="Si tus leads vienen de Meta, Google, WhatsApp, Instagram, Facebook o formularios web, Neo los contacta antes de que se enfríen">If leads come from Meta, Google, WhatsApp, Instagram, Facebook, or website forms, Neo reaches them before they go cold</p>
@@ -706,7 +754,7 @@
                   </article>
 
                   <article class="audience__card" role="listitem">
-                    <video class="audience__image" src="assets/audience/audience_team.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                    <video class="audience__image" src="assets/audience/audience_team.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
                     <div class="audience__copy">
                       <h3 data-en="For teams that cannot chase every message" data-es="Para equipos que no pueden perseguir cada mensaje">For teams that cannot chase every message</h3>
                       <p data-en="Neo handles first replies, qualification questions, follow-up reminders, and next steps so your team can focus on qualified conversations" data-es="Neo maneja primeras respuestas, preguntas de calificación, recordatorios y próximos pasos para que tu equipo se enfoque en conversaciones calificadas">Neo handles first replies, qualification questions, follow-up reminders, and next steps so your team can focus on qualified conversations</p>
@@ -714,7 +762,7 @@
                   </article>
 
                   <article class="audience__card" role="listitem">
-                    <video class="audience__image" src="assets/audience/audience_calls.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                    <video class="audience__image" src="assets/audience/audience_calls.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
                     <div class="audience__copy">
                       <h3 data-en="For offers that depend on booked calls" data-es="Para ofertas que dependen de llamadas agendadas">For offers that depend on booked calls</h3>
                       <p data-en="When a prospect qualifies, Neo sends them to your calendar automatically so your team spends less time coordinating and more time closing" data-es="Cuando un prospecto califica, Neo lo envía automáticamente a tu calendario para que tu equipo coordine menos y cierre más">When a prospect qualifies, Neo sends them to your calendar automatically so your team spends less time coordinating and more time closing</p>
@@ -722,7 +770,7 @@
                   </article>
 
                   <article class="audience__card" role="listitem">
-                    <video class="audience__image" src="assets/audience/audience_inbound.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                    <video class="audience__image" src="assets/audience/audience_inbound.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
                     <div class="audience__copy">
                       <h3 data-en="For multi-channel inboxes" data-es="Para bandejas multicanal">For multi-channel inboxes</h3>
                       <p data-en="Neo keeps WhatsApp, Instagram, Facebook, and site inquiries moving with one qualification flow instead of scattered follow-up" data-es="Neo mantiene WhatsApp, Instagram, Facebook y consultas web avanzando con un solo flujo de calificación en vez de seguimiento disperso">Neo keeps WhatsApp, Instagram, Facebook, and site inquiries moving with one qualification flow instead of scattered follow-up</p>
@@ -730,7 +778,7 @@
                   </article>
 
                   <article class="audience__card" role="listitem">
-                    <video class="audience__image" src="assets/audience/audience_service.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                    <video class="audience__image" src="assets/audience/audience_service.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
                     <div class="audience__copy">
                       <h3 data-en="For service businesses that need speed" data-es="Para negocios de servicios que necesitan rapidez">For service businesses that need speed</h3>
                       <p data-en="If every missed reply can become a lost booking, Neo gives every inbound lead an immediate next step" data-es="Si cada respuesta perdida puede convertirse en una reserva perdida, Neo le da a cada lead entrante un próximo paso inmediato">If every missed reply can become a lost booking, Neo gives every inbound lead an immediate next step</p>
@@ -739,18 +787,154 @@
                 </div>
               </div>
             </section>
+
+            <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+              <div class="pricing__inner">
+                <div class="pricing__copy">
+                  <h2
+                    class="pricing__title"
+                    id="pricing-title"
+                    data-en="A complete AI agent system, built around your sales process."
+                    data-es="Un sistema completo de agente de IA, construido alrededor de tu proceso de ventas."
+                  >A complete AI agent system, built around your sales process.</h2>
+                  <p
+                    class="pricing__lead"
+                    data-en="Neo is not a template chatbot. We map your channels, train the agent with your business information, connect handoff rules, and tune the responses before launch."
+                    data-es="Neo no es un chatbot de plantilla. Mapeamos tus canales, entrenamos el agente con la información de tu negocio, conectamos reglas de entrega y ajustamos las respuestas antes del lanzamiento."
+                  >Neo is not a template chatbot. We map your channels, train the agent with your business information, connect handoff rules, and tune the responses before launch.</p>
+                  <div class="pricing__stats" aria-label="Neo offer highlights">
+                    <div class="pricing__stat">
+                      <strong data-en="7 days" data-es="7 días">7 days</strong>
+                      <span data-en="typical launch window" data-es="ventana típica de lanzamiento">typical launch window</span>
+                    </div>
+                    <div class="pricing__stat">
+                      <strong data-en="24/7" data-es="24/7">24/7</strong>
+                      <span data-en="lead response coverage" data-es="cobertura de respuesta a leads">lead response coverage</span>
+                    </div>
+                    <div class="pricing__stat">
+                      <strong data-en="Done for you" data-es="Lo hacemos por ti">Done for you</strong>
+                      <span data-en="setup, training, and deployment" data-es="configuración, entrenamiento y despliegue">setup, training, and deployment</span>
+                    </div>
+                  </div>
+                </div>
+
+                <article class="pricing__offer" aria-label="Neo launch package">
+                  <div class="pricing__offer-head">
+                    <h3 data-en="Neo Launch Package" data-es="Paquete Neo Launch">Neo Launch Package</h3>
+                    <p data-en="Done-for-you build, training, and launch support." data-es="Construcción, entrenamiento y soporte de lanzamiento a cargo de nuestro equipo.">Done-for-you build, training, and launch support.</p>
+                  </div>
+
+                  <div class="pricing__price">
+                    <span data-en="Custom quote" data-es="Cotización a medida">Custom quote</span>
+                    <small data-en="Scoped after your evaluation call based on channels, lead volume, and handoff complexity." data-es="Definida después de tu llamada de evaluación según canales, volumen de leads y complejidad de entrega.">Scoped after your evaluation call based on channels, lead volume, and handoff complexity.</small>
+                  </div>
+
+                  <p class="pricing__includes-title" data-en="Included in the launch" data-es="Incluido en el lanzamiento">Included in the launch</p>
+                  <ul class="pricing__includes" role="list">
+                    <li data-en="AI agent trained on your offer, tone, FAQs, and qualification rules" data-es="Agente de IA entrenado con tu oferta, tono, FAQs y reglas de calificación">AI agent trained on your offer, tone, FAQs, and qualification rules</li>
+                    <li data-en="WhatsApp, Instagram, Facebook, and website lead flow setup" data-es="Configuración de flujos para WhatsApp, Instagram, Facebook y leads del sitio web">WhatsApp, Instagram, Facebook, and website lead flow setup</li>
+                    <li data-en="Calendar booking, follow-up logic, and human handoff rules" data-es="Agenda, lógica de seguimiento y reglas de entrega a humanos">Calendar booking, follow-up logic, and human handoff rules</li>
+                    <li data-en="Testing, tuning, launch support, and performance review" data-es="Pruebas, ajustes, soporte de lanzamiento y revisión de desempeño">Testing, tuning, launch support, and performance review</li>
+                  </ul>
+
+                  <a
+                    class="launch-steps__button pricing__button"
+                    href="https://cal.com/neosolutions"
+                    target="_blank"
+                    rel="noopener"
+                    data-en="Book your evaluation call"
+                    data-es="Agenda tu llamada de evaluación"
+                  >Book your evaluation call</a>
+                </article>
+              </div>
+            </section>
+
+            <section class="faq" id="faq" aria-labelledby="faq-title">
+              <div class="faq__inner">
+                <div class="faq__header">
+                  <h2
+                    class="faq__title"
+                    id="faq-title"
+                    data-en="Questions that usually come up before launch."
+                    data-es="Preguntas que suelen aparecer antes del lanzamiento."
+                  >Questions that usually come up before launch.</h2>
+                  <p
+                    class="faq__lead"
+                    data-en="Neo is built around your real inbox, offer, tone, and handoff process. These are the decisions we clarify in the evaluation call."
+                    data-es="Neo se construye alrededor de tu bandeja real, tu oferta, tu tono y tu proceso de entrega. Estas son las decisiones que aclaramos en la llamada de evaluación."
+                  >Neo is built around your real inbox, offer, tone, and handoff process. These are the decisions we clarify in the evaluation call.</p>
+                </div>
+
+                <div class="faq__list">
+                  <details class="faq__item" open>
+                    <summary data-en="Which channels can Neo handle?" data-es="¿Qué canales puede manejar Neo?">Which channels can Neo handle?</summary>
+                    <p data-en="Neo is designed for inbound leads from WhatsApp, Instagram, Facebook, and website forms. During setup, we define which channels should be connected first." data-es="Neo está diseñado para leads entrantes desde WhatsApp, Instagram, Facebook y formularios del sitio web. Durante la configuración definimos qué canales deben conectarse primero.">Neo is designed for inbound leads from WhatsApp, Instagram, Facebook, and website forms. During setup, we define which channels should be connected first.</p>
+                  </details>
+
+                  <details class="faq__item">
+                    <summary data-en="What do you need from my business?" data-es="¿Qué necesitan de mi negocio?">What do you need from my business?</summary>
+                    <p data-en="We need your offer details, common questions, qualification criteria, calendar rules, and examples of how your team normally replies to leads." data-es="Necesitamos detalles de tu oferta, preguntas frecuentes, criterios de calificación, reglas de agenda y ejemplos de cómo tu equipo responde normalmente a los leads.">We need your offer details, common questions, qualification criteria, calendar rules, and examples of how your team normally replies to leads.</p>
+                  </details>
+
+                  <details class="faq__item">
+                    <summary data-en="Can a human take over a conversation?" data-es="¿Un humano puede tomar una conversación?">Can a human take over a conversation?</summary>
+                    <p data-en="Yes. We define the handoff rules with you so Neo knows when to qualify, when to book, and when to send the lead to your team." data-es="Sí. Definimos contigo las reglas de entrega para que Neo sepa cuándo calificar, cuándo agendar y cuándo pasar el lead a tu equipo.">Yes. We define the handoff rules with you so Neo knows when to qualify, when to book, and when to send the lead to your team.</p>
+                  </details>
+
+                  <details class="faq__item">
+                    <summary data-en="How long does it take to go live?" data-es="¿Cuánto tarda en salir en vivo?">How long does it take to go live?</summary>
+                    <p data-en="Most launches are scoped around a 7-day window once we have the required business information, channel access, and approval on the response flow." data-es="La mayoría de lanzamientos se estructuran alrededor de una ventana de 7 días una vez que tenemos la información del negocio, acceso a canales y aprobación del flujo de respuestas.">Most launches are scoped around a 7-day window once we have the required business information, channel access, and approval on the response flow.</p>
+                  </details>
+
+                  <details class="faq__item">
+                    <summary data-en="Can Neo respond in Spanish and English?" data-es="¿Neo puede responder en español e inglés?">Can Neo respond in Spanish and English?</summary>
+                    <p data-en="Yes. The agent can be trained for your language needs, including bilingual lead flows, tone rules, and channel-specific response patterns." data-es="Sí. El agente puede entrenarse para tus necesidades de idioma, incluyendo flujos bilingües, reglas de tono y patrones de respuesta por canal.">Yes. The agent can be trained for your language needs, including bilingual lead flows, tone rules, and channel-specific response patterns.</p>
+                  </details>
+                </div>
+              </div>
+            </section>
+
+            <footer class="site-footer" aria-label="Neo Solutions footer">
+              <div class="site-footer__cta">
+                <div>
+                  <h2 data-en="Start with one evaluation call." data-es="Empieza con una llamada de evaluación.">Start with one evaluation call.</h2>
+                  <p data-en="We map your first automation path, identify the fastest lead-response wins, and define what Neo should handle first." data-es="Mapeamos tu primer flujo de automatización, identificamos las mejoras más rápidas en respuesta a leads y definimos qué debe manejar Neo primero.">We map your first automation path, identify the fastest lead-response wins, and define what Neo should handle first.</p>
+                </div>
+                <a
+                  class="launch-steps__button site-footer__button"
+                  href="https://cal.com/neosolutions"
+                  target="_blank"
+                  rel="noopener"
+                  data-en="Book your evaluation call"
+                  data-es="Agenda tu llamada de evaluación"
+                >Book your evaluation call</a>
+              </div>
+
+              <div class="site-footer__bottom">
+                <a class="site-footer__brand" href="#showreel" aria-label="Neo Solutions home">
+                  <img src="assets/brand/neo-logo-white.webp" alt="Neo Solutions">
+                </a>
+                <nav class="site-footer__links" aria-label="Footer navigation">
+                  <a href="#why-neo" data-en="Why Neo" data-es="Por qué Neo">Why Neo</a>
+                  <a href="#how-it-works" data-en="How it works" data-es="Cómo funciona">How it works</a>
+                  <a href="#audience" data-en="Who it's for" data-es="Para quién">Who it's for</a>
+                  <a href="#pricing" data-en="Pricing" data-es="Precios">Pricing</a>
+                </nav>
+                <p data-en="© 2026 Neo Solutions. Built to respond before leads go cold." data-es="© 2026 Neo Solutions. Creado para responder antes de que los leads se enfríen.">© 2026 Neo Solutions. Built to respond before leads go cold.</p>
+              </div>
+            </footer>
           </div>
         </div>
       </div>
     </section>
 
-    <script src="js/lang.js"></script>
+    <script src="js/lang.js?v=1"></script>
     <script src="js/simulation.js?v=2"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/nav.js"></script>
+    <script src="js/parallax.js?v=1"></script>
+    <script src="js/nav.js?v=1"></script>
     <script src="js/impact-scroll.js?v=18"></script>
     <script src="js/launch-steps.js?v=42"></script>
-    <script src="js/audience-carousel.js?v=6"></script>
-    <script src="js/showreel.js?v=6"></script>
+    <script src="js/audience-carousel.js?v=7"></script>
+    <script src="js/showreel.js?v=7"></script>
   </body>
 </html>

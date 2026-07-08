@@ -28,6 +28,17 @@ const strings = {
   }
 };
 
+const pageMeta = {
+  en: {
+    title: "Neo Solutions — AI agents that respond, qualify, and book your leads",
+    description: "Neo responds to your leads on WhatsApp, Instagram, and Facebook in seconds — qualifying, following up, and booking calls automatically, 24/7."
+  },
+  es: {
+    title: "Neo Solutions — Agentes de IA que responden, califican y agendan tus leads",
+    description: "Neo responde a tus leads en WhatsApp, Instagram y Facebook en segundos — calificando, dando seguimiento y agendando llamadas automáticamente, 24/7."
+  }
+};
+
 const supportedLangs = new Set(['en', 'es']);
 const storageKey = 'neo-lang';
 
@@ -77,11 +88,22 @@ const setLanguage = (lang, { persist = true } = {}) => {
     }
   });
   
+  // Localize the browser tab title and search snippet
+  const meta = pageMeta[nextLang] || pageMeta.en;
+  document.title = meta.title;
+  document.querySelector('meta[name="description"]')?.setAttribute('content', meta.description);
+
   // Toggle language switcher button states
   const btnEn = document.getElementById('btn-en');
   const btnEs = document.getElementById('btn-es');
-  if (btnEn) btnEn.classList.toggle('is-active', nextLang === 'en');
-  if (btnEs) btnEs.classList.toggle('is-active', nextLang === 'es');
+  if (btnEn) {
+    btnEn.classList.toggle('is-active', nextLang === 'en');
+    btnEn.setAttribute('aria-pressed', String(nextLang === 'en'));
+  }
+  if (btnEs) {
+    btnEs.classList.toggle('is-active', nextLang === 'es');
+    btnEs.setAttribute('aria-pressed', String(nextLang === 'es'));
+  }
   
   // Save preference
   if (persist) {
