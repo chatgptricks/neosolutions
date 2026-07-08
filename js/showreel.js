@@ -212,10 +212,21 @@
     rafId = window.requestAnimationFrame(check);
   };
 
+  const detachIntroGestureListeners = () => {
+    window.removeEventListener('wheel', startIntroVideo);
+    window.removeEventListener('touchstart', startIntroVideo);
+    window.removeEventListener('keydown', startIntroVideo);
+    intro?.removeEventListener('click', startIntroVideoFromClick, true);
+  };
+
   const startIntroVideo = () => {
     syncIntroState();
     if (!isIntroVideo) return;
+    // These gesture listeners exist only to start playback once. Without this
+    // guard, every wheel tick / key press / click force-resumes a paused video.
+    if (loaded) return;
     loaded = requestVideoPlayback();
+    if (loaded) detachIntroGestureListeners();
     if (intervalId) {
       clearInterval(intervalId);
       intervalId = 0;

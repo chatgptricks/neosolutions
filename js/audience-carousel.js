@@ -63,7 +63,32 @@
     }, { passive: false });
 
     track.addEventListener('scroll', () => updateButtons(section), { passive: true });
-    window.addEventListener('resize', () => updateButtons(section), { passive: true });
     updateButtons(section);
   });
+
+  window.addEventListener('resize', () => carousels.forEach(updateButtons), { passive: true });
+
+  // Card videos have no autoplay attribute: play them only while near the
+  // viewport so six MP4s don't download and decode on initial page load.
+  const videos = Array.from(document.querySelectorAll('.audience video.audience__image'));
+  const playSafely = (video) => {
+    const attempt = video.play();
+    if (attempt && typeof attempt.catch === 'function') attempt.catch(() => {});
+  };
+
+  if (videos.length && 'IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          playSafely(entry.target);
+        } else {
+          entry.target.pause();
+        }
+      });
+    }, { rootMargin: '160px' });
+
+    videos.forEach((video) => videoObserver.observe(video));
+  } else {
+    videos.forEach(playSafely);
+  }
 })();

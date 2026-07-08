@@ -1,0 +1,24 @@
+{
+  "name": "neo-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "python3 -m http.server 4173",
+    "check": "cmp index.html neo-hero.html && for f in js/*.js; do node --check \"$f\"; done && echo 'OK: entrypoints in sync, JS valid'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chatgptricks/neosolutions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chatgptricks/neosolutions/issues"
+  },
+  "homepage": "https://github.com/chatgptricks/neosolutions#readme",
+  "devDependencies": {
+    "playwright": "^1.61.1"
+  }
+}
