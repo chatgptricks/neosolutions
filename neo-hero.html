@@ -23,7 +23,7 @@
     <link rel="icon" type="image/png" href="assets/brand/favicon.png">
     <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
     <link rel="preconnect" href="https://fast.wistia.com" />
-    <link rel="stylesheet" href="css/style.css?v=59">
+    <link rel="stylesheet" href="css/style.css?v=60">
     <script src="https://fast.wistia.com/player.js" async></script>
     <script src="https://fast.wistia.com/embed/ro89dasf7b.js" async type="module"></script>
     <style>
@@ -89,7 +89,7 @@
       </div>
     </div>
 
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" id="hero-demo" aria-labelledby="hero-title">
       <div class="hero__bg" aria-hidden="true">
         <div class="hero__streak"></div>
         <div class="hero__orb hero__orb--planet"></div>
@@ -293,7 +293,7 @@
 
         <div class="hero__showreel" aria-label="Neo system details" data-en-aria-label="Neo system details" data-es-aria-label="Detalles del sistema Neo">
           <div class="showreel__inner">
-            <div class="showreel__tickers">
+            <div class="showreel__tickers" id="tickers">
               <div class="showreel__ticker-line">
                 <div class="showreel__ticker" aria-hidden="true">
                   <div class="showreel__ticker-track">
@@ -853,6 +853,107 @@
               </div>
             </section>
 
+            <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+              <div class="testimonials__inner">
+                <div class="testimonials__header">
+                  <h2
+                    class="testimonials__title"
+                    id="testimonials-title"
+                    data-en="What teams notice after Neo starts replying."
+                    data-es="Lo que los equipos notan cuando Neo empieza a responder."
+                  >What teams notice after Neo starts replying.</h2>
+                  <p
+                    class="testimonials__lead"
+                    data-en="The pattern is simple: faster first replies, cleaner qualification, and fewer conversations falling through the cracks."
+                    data-es="El patrón es simple: primeras respuestas más rápidas, calificación más limpia y menos conversaciones perdidas."
+                  >The pattern is simple: faster first replies, cleaner qualification, and fewer conversations falling through the cracks.</p>
+                </div>
+
+                <div class="testimonials__grid" aria-label="Neo customer outcomes" data-en-aria-label="Neo customer outcomes" data-es-aria-label="Resultados de clientes con Neo">
+                  <article class="testimonial-card">
+                    <p class="testimonial-card__quote" data-en="Neo helped us answer every inbound lead before the ad spend went cold." data-es="Neo nos ayudó a responder cada lead entrante antes de que la inversión en anuncios se enfriara.">Neo helped us answer every inbound lead before the ad spend went cold.</p>
+                    <div class="testimonial-card__meta">
+                      <strong data-en="Local clinic" data-es="Clínica local">Local clinic</strong>
+                      <span data-en="Inbound lead response" data-es="Respuesta a leads entrantes">Inbound lead response</span>
+                    </div>
+                  </article>
+
+                  <article class="testimonial-card">
+                    <p class="testimonial-card__quote" data-en="The biggest win was consistency. Leads get the same strong first response every time." data-es="La mayor mejora fue la consistencia. Los leads reciben una primera respuesta fuerte cada vez.">The biggest win was consistency. Leads get the same strong first response every time.</p>
+                    <div class="testimonial-card__meta">
+                      <strong data-en="Paid ads agency" data-es="Agencia de anuncios">Paid ads agency</strong>
+                      <span data-en="Qualification flow" data-es="Flujo de calificación">Qualification flow</span>
+                    </div>
+                  </article>
+
+                  <article class="testimonial-card">
+                    <p class="testimonial-card__quote" data-en="We stopped guessing who needed follow-up. Neo keeps the next step moving." data-es="Dejamos de adivinar quién necesitaba seguimiento. Neo mantiene el próximo paso avanzando.">We stopped guessing who needed follow-up. Neo keeps the next step moving.</p>
+                    <div class="testimonial-card__meta">
+                      <strong data-en="Service business" data-es="Negocio de servicios">Service business</strong>
+                      <span data-en="Booked-call handoff" data-es="Entrega hacia llamada agendada">Booked-call handoff</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section class="lead-capture" id="lead-capture" aria-labelledby="lead-capture-title">
+              <div class="lead-capture__inner">
+                <div class="lead-capture__copy">
+                  <p class="lead-capture__eyebrow" data-en="Get evaluated" data-es="Evalúa tu caso">Get evaluated</p>
+                  <h2
+                    class="lead-capture__title"
+                    id="lead-capture-title"
+                    data-en="Tell us where your leads are getting stuck."
+                    data-es="Cuéntanos dónde se están quedando tus leads."
+                  >Tell us where your leads are getting stuck.</h2>
+                  <p
+                    class="lead-capture__lead"
+                    data-en="Share your channels, lead volume, and what you want Neo to handle first. We will use it to map the evaluation call."
+                    data-es="Comparte tus canales, volumen de leads y qué quieres que Neo maneje primero. Lo usamos para mapear la llamada de evaluación."
+                  >Share your channels, lead volume, and what you want Neo to handle first. We will use it to map the evaluation call.</p>
+                </div>
+
+                <form class="lead-capture__form" action="#" method="post" aria-label="Lead capture form" data-en-aria-label="Lead capture form" data-es-aria-label="Formulario de captura de leads" onsubmit="event.preventDefault(); this.classList.add('is-submitted'); this.querySelector('[data-form-status]').hidden = false;">
+                  <label class="lead-capture__field">
+                    <span data-en="Name" data-es="Nombre">Name</span>
+                    <input type="text" name="name" autocomplete="name" required placeholder="Your name" data-en-placeholder="Your name" data-es-placeholder="Tu nombre">
+                  </label>
+
+                  <label class="lead-capture__field">
+                    <span data-en="Work email" data-es="Email de trabajo">Work email</span>
+                    <input type="email" name="email" autocomplete="email" required placeholder="you@company.com" data-en-placeholder="you@company.com" data-es-placeholder="tu@empresa.com">
+                  </label>
+
+                  <label class="lead-capture__field">
+                    <span data-en="Business" data-es="Negocio">Business</span>
+                    <input type="text" name="company" autocomplete="organization" placeholder="Company or brand" data-en-placeholder="Company or brand" data-es-placeholder="Empresa o marca">
+                  </label>
+
+                  <label class="lead-capture__field">
+                    <span data-en="Main lead channel" data-es="Canal principal de leads">Main lead channel</span>
+                    <select name="channel" required aria-label="Main lead channel" data-en-aria-label="Main lead channel" data-es-aria-label="Canal principal de leads">
+                      <option value="" data-en="Select one" data-es="Selecciona uno">Select one</option>
+                      <option value="whatsapp" data-en="WhatsApp" data-es="WhatsApp">WhatsApp</option>
+                      <option value="instagram" data-en="Instagram" data-es="Instagram">Instagram</option>
+                      <option value="facebook" data-en="Facebook" data-es="Facebook">Facebook</option>
+                      <option value="website" data-en="Website forms" data-es="Formularios web">Website forms</option>
+                      <option value="multiple" data-en="Multiple channels" data-es="Múltiples canales">Multiple channels</option>
+                    </select>
+                  </label>
+
+                  <label class="lead-capture__field lead-capture__field--full">
+                    <span data-en="What should Neo handle first?" data-es="¿Qué debería manejar Neo primero?">What should Neo handle first?</span>
+                    <textarea name="message" placeholder="Example: qualify WhatsApp leads and book evaluation calls." data-en-placeholder="Example: qualify WhatsApp leads and book evaluation calls." data-es-placeholder="Ejemplo: calificar leads de WhatsApp y agendar llamadas de evaluación."></textarea>
+                  </label>
+
+                  <button class="launch-steps__button lead-capture__submit" type="submit" data-en="Send my details" data-es="Enviar mis datos">Send my details</button>
+                  <p class="lead-capture__status" data-form-status hidden data-en="Received locally. Connect the endpoint next so submissions go to your CRM or inbox." data-es="Recibido localmente. El siguiente paso es conectar el endpoint para enviar respuestas a tu CRM o inbox.">Received locally. Connect the endpoint next so submissions go to your CRM or inbox.</p>
+                  <p class="lead-capture__fineprint" data-en="Form endpoint is ready to connect to your CRM, email, or booking workflow." data-es="El endpoint del formulario queda listo para conectar a tu CRM, email o flujo de agenda.">Form endpoint is ready to connect to your CRM, email, or booking workflow.</p>
+                </form>
+              </div>
+            </section>
+
             <section class="faq" id="faq" aria-labelledby="faq-title">
               <div class="faq__inner">
                 <div class="faq__header">
@@ -914,23 +1015,93 @@
                 >Book your evaluation call</a>
               </div>
 
-              <div class="site-footer__bottom">
-                <a class="site-footer__brand" href="#showreel" aria-label="Neo Solutions home" data-en-aria-label="Neo Solutions home" data-es-aria-label="Inicio de Neo Solutions">
-                  <img src="assets/brand/neo-logo-white.webp" alt="Neo Solutions" data-en-alt="Neo Solutions" data-es-alt="Neo Solutions">
-                </a>
-                <nav class="site-footer__links" aria-label="Footer navigation" data-en-aria-label="Footer navigation" data-es-aria-label="Navegación del pie de página">
+              <div class="site-footer__main">
+                <div class="site-footer__company">
+                  <a class="site-footer__logo" href="#showreel" aria-label="Neo Solutions home" data-en-aria-label="Neo Solutions home" data-es-aria-label="Inicio de Neo Solutions">
+                    <img src="assets/brand/neo-logo-white.webp" alt="Neo Solutions" data-en-alt="Neo Solutions" data-es-alt="Neo Solutions">
+                  </a>
+                  <p class="site-footer__tagline" data-en="Neo turns inbound messages into qualified conversations, booked calls, and clean handoffs. Plug &amp; play lead response for your business." data-es="Neo convierte mensajes entrantes en conversaciones calificadas, llamadas agendadas y entregas claras. Respuesta a leads plug &amp; play para tu negocio.">Neo turns inbound messages into qualified conversations, booked calls, and clean handoffs. Plug &amp; play lead response for your business.</p>
+                  <div class="site-footer__socials" aria-label="Social links" data-en-aria-label="Social links" data-es-aria-label="Enlaces sociales">
+                    <a href="#" class="site-footer__social" aria-label="Neo Solutions on Instagram" data-en-aria-label="Neo Solutions on Instagram" data-es-aria-label="Neo Solutions en Instagram">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+                    </a>
+                    <a href="#" class="site-footer__social" aria-label="Neo Solutions on LinkedIn" data-en-aria-label="Neo Solutions on LinkedIn" data-es-aria-label="Neo Solutions en LinkedIn">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9.5 9H13.3v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.1c0-1.22-.02-2.8-1.7-2.8-1.7 0-1.96 1.32-1.96 2.7V21h-4z"></path></svg>
+                    </a>
+                    <a href="#" class="site-footer__social" aria-label="Neo Solutions on YouTube" data-en-aria-label="Neo Solutions on YouTube" data-es-aria-label="Neo Solutions en YouTube">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M22.5 7.2a2.9 2.9 0 0 0-2-2C18.7 4.7 12 4.7 12 4.7s-6.7 0-8.5.5a2.9 2.9 0 0 0-2 2C1 9 1 12 1 12s0 3 .5 4.8a2.9 2.9 0 0 0 2 2C5.3 19.3 12 19.3 12 19.3s6.7 0 8.5-.5a2.9 2.9 0 0 0 2-2C23 15 23 12 23 12s0-3-.5-4.8zM9.8 15.3V8.7l5.7 3.3z"></path></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <nav class="site-footer__column" aria-label="Navigation links" data-en-aria-label="Navigation links" data-es-aria-label="Enlaces de navegación">
+                  <p class="site-footer__eyebrow" data-en="Navigation" data-es="Navegación">Navigation</p>
                   <a href="#why-neo" data-en="Why Neo" data-es="Por qué Neo">Why Neo</a>
                   <a href="#how-it-works" data-en="How it works" data-es="Cómo funciona">How it works</a>
-                  <a href="#audience" data-en="Who it's for" data-es="Para quién">Who it's for</a>
-                  <a href="#pricing" data-en="Pricing" data-es="Precios">Pricing</a>
+                  <a href="#control" data-en="Control" data-es="Control">Control</a>
+                  <a href="#pricing" data-en="Complete system" data-es="Sistema completo">Complete system</a>
+                  <a href="#faq" data-en="FAQ" data-es="Preguntas frecuentes">FAQ</a>
                 </nav>
-                <p data-en="© 2026 Neo Solutions. Built to respond before leads go cold." data-es="© 2026 Neo Solutions. Creado para responder antes de que los leads se enfríen.">© 2026 Neo Solutions. Built to respond before leads go cold.</p>
+
+                <nav class="site-footer__column" aria-label="Page sections" data-en-aria-label="Page sections" data-es-aria-label="Secciones de la página">
+                  <p class="site-footer__eyebrow" data-en="Sections" data-es="Secciones">Sections</p>
+                  <a href="#showreel" data-en="Video" data-es="Video">Video</a>
+                  <a href="#hero-demo" data-en="Hero demo" data-es="Hero demo">Hero demo</a>
+                  <a href="#tickers" data-en="Message tickers" data-es="Tickers de mensajes">Message tickers</a>
+                  <a href="#testimonials" data-en="Testimonials" data-es="Testimonios">Testimonials</a>
+                  <a href="#lead-capture" data-en="Lead capture" data-es="Captura de leads">Lead capture</a>
+                </nav>
+
+                <div class="site-footer__column site-footer__column--contact">
+                  <p class="site-footer__eyebrow" data-en="Contact" data-es="Contacto">Contact</p>
+                  <a class="site-footer__contact-row" href="mailto:hello@neosolutions.ai">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="m3.5 7 8.5 6 8.5-6"></path></svg>
+                    <span>hello@neosolutions.ai</span>
+                  </a>
+                  <span class="site-footer__contact-row site-footer__contact-row--static">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+                    <span data-en="Your City · Region" data-es="Tu ciudad · Región">Your City · Region</span>
+                  </span>
+                </div>
+
+                <div class="site-footer__column site-footer__column--start">
+                  <p class="site-footer__eyebrow" data-en="Get started" data-es="Comienza ahora">Get started</p>
+                  <p class="site-footer__start-copy" data-en="See how Neo responds to leads and book your evaluation call." data-es="Descubre cómo Neo responde a los leads y agenda tu llamada de evaluación.">See how Neo responds to leads and book your evaluation call.</p>
+                  <a class="site-footer__start-link" href="https://cal.com/neosolutions" target="_blank" rel="noopener">
+                    <span data-en="Book a call" data-es="Agendar llamada">Book a call</span>
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+                  </a>
+                </div>
               </div>
+
+              <div class="site-footer__legal">
+                <p data-en="© 2026 Neo Solutions. All rights reserved." data-es="© 2026 Neo Solutions. Todos los derechos reservados.">© 2026 Neo Solutions. All rights reserved.</p>
+                <div class="site-footer__legal-links">
+                  <a href="#" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+                  <a href="#" data-en="Terms of Use" data-es="Términos de Uso">Terms of Use</a>
+                </div>
+              </div>
+
+              <p class="site-footer__disclaimer" data-en="Neo Solutions is a lead-response automation platform. Results mentioned are based on real client data; individual results may vary. This platform does not guarantee specific results." data-es="Neo Solutions es una plataforma de automatización de respuesta a leads. Los resultados mencionados se basan en datos reales de clientes; los resultados individuales pueden variar. Esta plataforma no garantiza resultados específicos.">Neo Solutions is a lead-response automation platform. Results mentioned are based on real client data; individual results may vary. This platform does not guarantee specific results.</p>
             </footer>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="chat-widget" aria-label="Neo floating chat widget" data-en-aria-label="Neo floating chat widget" data-es-aria-label="Widget flotante de chat de Neo">
+      <div class="chat-widget__panel">
+        <p data-en="Want to see how Neo would answer your leads?" data-es="¿Quieres ver cómo respondería Neo a tus leads?">Want to see how Neo would answer your leads?</p>
+        <a class="launch-steps__button" href="https://cal.com/neosolutions" target="_blank" rel="noopener" data-en="Book a quick call" data-es="Agenda una llamada rápida">Book a quick call</a>
+      </div>
+      <button class="chat-widget__button" type="button" aria-label="Open Neo chat help" data-en-aria-label="Open Neo chat help" data-es-aria-label="Abrir ayuda de chat de Neo">
+        <span class="chat-widget__orb" aria-hidden="true"></span>
+        <span class="chat-widget__copy">
+          <strong data-en="Ask Neo" data-es="Pregunta a Neo">Ask Neo</strong>
+          <span data-en="Response ready" data-es="Respuesta lista">Response ready</span>
+        </span>
+      </button>
+    </div>
 
     <script src="js/lang.js?v=2"></script>
     <script src="js/simulation.js?v=2"></script>
