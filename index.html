@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Neo Solutions — AI agents that respond, qualify, and book your leads</title>
     <meta name="description" content="Neo responds to your leads on WhatsApp, Instagram, and Facebook in seconds — qualifying, following up, and booking calls automatically, 24/7." />
-    <link rel="canonical" href="https://chatgptricks.github.io/neosolutions/" />
-    <link rel="alternate" hreflang="en" href="https://chatgptricks.github.io/neosolutions/?lang=en" />
-    <link rel="alternate" hreflang="es" href="https://chatgptricks.github.io/neosolutions/?lang=es" />
-    <link rel="alternate" hreflang="x-default" href="https://chatgptricks.github.io/neosolutions/" />
+    <link rel="canonical" href="https://neosolutions.ai/" />
+    <link rel="alternate" hreflang="en" href="https://neosolutions.ai/?lang=en" />
+    <link rel="alternate" hreflang="es" href="https://neosolutions.ai/?lang=es" />
+    <link rel="alternate" hreflang="x-default" href="https://neosolutions.ai/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Neo Solutions" />
     <meta property="og:title" content="Neo Solutions — AI agents that respond, qualify, and book your leads" />
     <meta property="og:description" content="Neo responds to your leads on WhatsApp, Instagram, and Facebook in seconds — qualifying, following up, and booking calls automatically, 24/7." />
-    <meta property="og:url" content="https://chatgptricks.github.io/neosolutions/" />
-    <meta property="og:image" content="https://chatgptricks.github.io/neosolutions/showreel-poster.jpg" />
+    <meta property="og:url" content="https://neosolutions.ai/" />
+    <meta property="og:image" content="https://neosolutions.ai/showreel-poster.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Neo Solutions — AI agents that respond, qualify, and book your leads" />
     <meta name="twitter:description" content="Neo responds to your leads on WhatsApp, Instagram, and Facebook in seconds — qualifying, following up, and booking calls automatically, 24/7." />
-    <meta name="twitter:image" content="https://chatgptricks.github.io/neosolutions/showreel-poster.jpg" />
+    <meta name="twitter:image" content="https://neosolutions.ai/showreel-poster.jpg" />
     <link rel="icon" type="image/png" href="assets/brand/favicon.png">
     <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
     <link rel="preconnect" href="https://fast.wistia.com" />
@@ -664,7 +664,7 @@
 
                 <div class="control__row">
                   <figure class="control__media">
-                    <img class="control__photo" src="https://images.unsplash.com/photo-1562564055-71e051d33c19?w=900&fit=crop&q=80" alt="" loading="lazy" />
+                    <img class="control__photo" src="assets/control/control_setup.jpg" alt="Neo AI agent setup" loading="lazy" />
                   </figure>
                   <ul class="control__list" role="list">
                     <li class="control__item">
@@ -702,7 +702,7 @@
                     </li>
                   </ul>
                   <figure class="control__media">
-                    <img class="control__photo" src="https://images.unsplash.com/photo-1554774853-719586f82d77?w=900&fit=crop&q=80" alt="" loading="lazy" />
+                    <img class="control__photo" src="assets/control/control_handoff.jpg" alt="Neo qualified lead handoff" loading="lazy" />
                   </figure>
                 </div>
               </div>
@@ -961,7 +961,9 @@
                   >Share your channels, lead volume, and what you want Neo to handle first. We will use it to map the evaluation call.</p>
                 </div>
 
-                <form class="lead-capture__form" action="#" method="post" aria-label="Lead capture form" data-en-aria-label="Lead capture form" data-es-aria-label="Formulario de captura de leads" onsubmit="event.preventDefault(); this.classList.add('is-submitted'); this.querySelector('[data-form-status]').hidden = false;">
+                <form class="lead-capture__form" action="/api/lead" method="post" aria-label="Lead capture form" data-en-aria-label="Lead capture form" data-es-aria-label="Formulario de captura de leads">
+                  <input type="text" name="website" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
+                  <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
                   <label class="lead-capture__field">
                     <span data-en="Name" data-es="Nombre">Name</span>
                     <input type="text" name="name" autocomplete="name" required placeholder="Your name" data-en-placeholder="Your name" data-es-placeholder="Tu nombre">
@@ -995,8 +997,8 @@
                   </label>
 
                   <button class="launch-steps__button lead-capture__submit" type="submit" data-en="Send my details" data-es="Enviar mis datos">Send my details</button>
-                  <p class="lead-capture__status" data-form-status hidden data-en="Received locally. Connect the endpoint next so submissions go to your CRM or inbox." data-es="Recibido localmente. El siguiente paso es conectar el endpoint para enviar respuestas a tu CRM o inbox.">Received locally. Connect the endpoint next so submissions go to your CRM or inbox.</p>
-                  <p class="lead-capture__fineprint" data-en="Form endpoint is ready to connect to your CRM, email, or booking workflow." data-es="El endpoint del formulario queda listo para conectar a tu CRM, email o flujo de agenda.">Form endpoint is ready to connect to your CRM, email, or booking workflow.</p>
+                  <p class="lead-capture__status" data-form-status hidden data-en="Thank you! Your details have been received. We will review your lead channels and reach out shortly." data-es="¡Gracias! Hemos recibido tus datos. Revisaremos tus canales de leads y te contactaremos a la brevedad.">Thank you! Your details have been received. We will review your lead channels and reach out shortly.</p>
+                  <p class="lead-capture__fineprint" data-en="We respect your privacy. Your information is strictly used to evaluate your lead channels." data-es="Respetamos tu privacidad. Tu información se utiliza exclusivamente para evaluar tus canales de leads.">We respect your privacy. Your information is strictly used to evaluate your lead channels.</p>
                 </form>
               </div>
             </section>
@@ -1107,7 +1109,7 @@
                   </a>
                   <span class="site-footer__contact-row site-footer__contact-row--static">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
-                    <span data-en="Your City · Region" data-es="Tu ciudad · Región">Your City · Region</span>
+                    <span data-en="San José, Costa Rica" data-es="San José, Costa Rica">San José, Costa Rica</span>
                   </span>
                 </div>
 
@@ -1124,8 +1126,8 @@
               <div class="site-footer__legal">
                 <p data-en="© 2026 Neo Solutions. All rights reserved." data-es="© 2026 Neo Solutions. Todos los derechos reservados.">© 2026 Neo Solutions. All rights reserved.</p>
                 <div class="site-footer__legal-links">
-                  <a href="#" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
-                  <a href="#" data-en="Terms of Use" data-es="Términos de Uso">Terms of Use</a>
+                  <a href="privacy.html" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+                  <a href="terms.html" data-en="Terms of Use" data-es="Términos de Uso">Terms of Use</a>
                 </div>
               </div>
 
@@ -1144,6 +1146,7 @@
     <script src="js/launch-steps.js?v=42"></script>
     <script src="js/audience-carousel.js?v=7"></script>
     <script src="js/showreel.js?v=7"></script>
+    <script src="js/lead-form.js?v=1"></script>
     <script
       src="https://cdn.builderbot.cloud/sdk.umd.js"
       data-builderbot-chat

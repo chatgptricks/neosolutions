@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://neosolutions.ai/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neosolutions.ai/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neosolutions.ai/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neosolutions.ai/"/>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://neosolutions.ai/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neosolutions.ai/privacy.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neosolutions.ai/privacy.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neosolutions.ai/privacy.html"/>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://neosolutions.ai/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neosolutions.ai/terms.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neosolutions.ai/terms.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neosolutions.ai/terms.html"/>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
